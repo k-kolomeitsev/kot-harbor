@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "a841d15e-116c-4ff1-bc72-d844c044974d",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "climate_analyzer/",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

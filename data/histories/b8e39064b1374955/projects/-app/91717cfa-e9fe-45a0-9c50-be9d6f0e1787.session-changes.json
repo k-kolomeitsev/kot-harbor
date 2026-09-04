@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "91717cfa-e9fe-45a0-9c50-be9d6f0e1787",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git/\n.github/\n.gitignore\nCHANGELOG.md\nLICENSE.md\nREADME.md\ndocs/\nhttpx/\nmkdocs.yml\npyproject.toml\nrequirements.txt\nscripts/\ntests/",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

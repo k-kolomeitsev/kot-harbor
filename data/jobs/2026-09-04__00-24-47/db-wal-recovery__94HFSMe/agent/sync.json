@@ -1,0 +1,10 @@
+{
+  "conflicts": [],
+  "errors": [
+    {
+      "error": "unknown session (or it has no virtual state to sync)",
+      "path": ""
+    }
+  ],
+  "synced": []
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "79ead632-913a-4e74-830e-06e18c20f0b8",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".editorconfig\n.git/\n.gitattributes\n.github/\n.gitignore\n.husky/\n.npmrc\n.prettierignore\n.vscode/\nCHANGELOG.md\nLICENSE.md\nREADME.md\n_config.yml\ncspell.json\neslint.config.mjs\nknip.json\nnode_modules/\npackage-lock.json\npackage.json\nprettier.config.mjs\nscripts/\nsrc/\ntest/\ntest262/\ntsconfig.bundle.json\ntsconfig.json\ntypes/\nvitest.config.ts",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

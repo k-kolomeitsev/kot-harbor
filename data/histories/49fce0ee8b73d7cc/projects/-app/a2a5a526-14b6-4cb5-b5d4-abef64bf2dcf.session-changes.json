@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "a2a5a526-14b6-4cb5-b5d4-abef64bf2dcf",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "sequences.fasta",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

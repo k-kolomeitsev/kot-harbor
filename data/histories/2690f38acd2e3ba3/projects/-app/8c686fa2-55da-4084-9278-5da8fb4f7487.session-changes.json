@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "8c686fa2-55da-4084-9278-5da8fb4f7487",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git-blame-ignore-revs\n.git/\n.github/\n.gitignore\n.pre-commit-config.yaml\n.readthedocs.yaml\nAGENTS.md\nCLAUDE.md\nLICENSE\nREADME.md\nconftest.py\ncontributing.md\ndocs/\npyproject.toml\nstatemachine/\ntests/\nuv.lock",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

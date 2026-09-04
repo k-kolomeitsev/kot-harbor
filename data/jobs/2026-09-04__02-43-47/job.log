@@ -1,0 +1,70 @@
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary 3f269a72ff69398b1250c584171f32d12c0d8085 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\anko-typed-variable-bindings__HsqEjUh\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__3757c8184db74d1694d146b4c3bae16a: docker inspect returned 1
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary 04355e8b26d1ad5264ef62314a2bc46c4de58ed8 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\arktype-json-schema-refs-depende__42BYPtX\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__a1d8c4daa9c57f3f0514f2ef8cbd8057: docker inspect returned 1
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary 11614be9021aa4ac078d4d0693a8b5250a1010d8 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\fastapi-deprecation-response-hea__bNL5CCY\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__631b829f60ffdec3dea038d7ceded585: docker inspect returned 1
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command failed
+Collecting main service artifacts
+Not retrying trial because the maximum number of retries has been reached
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary 89bede495dc2c85e1c57ba627a18526f71d57396 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\katex-multicolumn-array-spans__Q9BJVzX\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__27c226c85753bfe5ad3128fa486c6d7c: docker inspect returned 1
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary d141eb14a40b79c04d1b1db5c20c6afa3844c0d9 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\meriyah-explicit-resource-declar__t6QeVnM\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__cff0f9c5cca0ea677389a9bbc42d65f7: docker inspect returned 1
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary bc2796e01998ebc2d40818323f93113aed2542ea HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\scc-bounded-memory-spilling__tXZmikE\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__4f97783f57cb2c47203ff2ce4d1f257f: docker inspect returned 1

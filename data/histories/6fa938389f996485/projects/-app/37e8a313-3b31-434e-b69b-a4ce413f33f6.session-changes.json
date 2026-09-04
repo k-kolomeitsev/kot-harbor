@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "37e8a313-3b31-434e-b69b-a4ce413f33f6",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "eigen.py\neval.py",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

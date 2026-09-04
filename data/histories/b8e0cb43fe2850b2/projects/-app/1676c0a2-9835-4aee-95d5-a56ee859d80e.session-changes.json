@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "1676c0a2-9835-4aee-95d5-a56ee859d80e",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git/\n.github/\n.gitignore\n.pdm-build/\n.pre-commit-config.yaml\n.python-version\nCITATION.cff\nCONTRIBUTING.md\nLICENSE\nREADME.md\nSECURITY.md\ndocs/\ndocs_src/\nfastapi-slim/\nfastapi/\npyproject.toml\nscripts/\ntests/\nuv.lock",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

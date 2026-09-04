@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "639b1f0e-b377-47ac-aa86-ebf90789fbd7",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".devcontainer/\n.git/\n.gitattributes\n.github/\n.gitignore\n.goreleaser.yml\n.ignore\n.sccignore\nCODE_OF_CONDUCT.md\nCONTRIBUTING.md\nDockerfile\nLANGUAGES.md\nLICENSE\nREADME.md\nSCC-OUTPUT-REPORT.html\nbenchmark.sh\nbenchmark_to_chart.py\ncmd/\nexamples/\ngo.mod\ngo.sum\nlanguages.json\nmain.go\nmain_test.go\npackages/\nperformance-over-time.png\nprocessor/\nscc.jpg\nscripts/\ntest-all.sh\nvendor/",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

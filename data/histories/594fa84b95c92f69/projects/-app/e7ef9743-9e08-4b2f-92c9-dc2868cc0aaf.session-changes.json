@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "e7ef9743-9e08-4b2f-92c9-dc2868cc0aaf",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git/\n.github/\n.gitignore\n.vscode/\nLICENSE\nREADME.md\nark/\neslint.config.js\nnode_modules/\npackage.json\npnpm-lock.yaml\npnpm-workspace.yaml\ntsconfig.json",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

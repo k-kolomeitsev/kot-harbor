@@ -1,0 +1,65 @@
+{
+    "id": "c3131fce-8cba-4785-9a14-a11e13d177da",
+    "started_at": "2026-09-04T00:24:47.425414",
+    "updated_at": "2026-09-04T02:43:42.775146",
+    "finished_at": "2026-09-04T02:43:42.775146",
+    "n_total_trials": 21,
+    "stats": {
+        "n_completed_trials": 21,
+        "n_errored_trials": 1,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "KOT__k3__tb21-tasks": {
+                "n_trials": 21,
+                "n_errors": 1,
+                "metrics": [
+                    {
+                        "mean": 0.8095238095238095
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "0.0": [
+                            "build-cython-ext__UXEtpaN",
+                            "dna-insert__jqVmugH",
+                            "kv-store-grpc__DEjg4ZD",
+                            "largest-eigenval__PCN8Fed"
+                        ],
+                        "1.0": [
+                            "chess-best-move__uAUSYb6",
+                            "code-from-image__eUxE4TJ",
+                            "constraints-scheduling__N8NLVJC",
+                            "db-wal-recovery__94HFSMe",
+                            "extract-elf__5sxZ3T4",
+                            "gcode-to-text__YLWpZLc",
+                            "git-leak-recovery__4hX65E6",
+                            "log-summary-date-ranges__obYpkMT",
+                            "merge-diff-arc-agi-task__3NDYiVW",
+                            "modernize-scientific-stack__vREfCoz",
+                            "multi-source-data-merger__BqtNqZJ",
+                            "openssl-selfsigned-cert__t75rCx5",
+                            "polyglot-c-py__pvuWZuS",
+                            "regex-log__jqGSu2i",
+                            "sanitize-git-repo__tEzFRUB",
+                            "sqlite-db-truncate__p2v735F",
+                            "vulnerable-secret__ZLZBA5K"
+                        ]
+                    }
+                },
+                "exception_stats": {
+                    "AgentTimeoutError": [
+                        "build-cython-ext__UXEtpaN"
+                    ]
+                }
+            }
+        },
+        "n_input_tokens": 8556047,
+        "n_cache_tokens": 8096726,
+        "n_output_tokens": 290973,
+        "cost_usd": null
+    }
+}

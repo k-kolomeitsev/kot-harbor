@@ -1,0 +1,24 @@
+{
+  "runs": [
+    {
+      "job": "2026-09-04__00-24-47",
+      "family": "tb",
+      "klass": "canonical",
+      "provider": "moonshotai",
+      "model": "k3",
+      "effort": null,
+      "n_concurrent": 1,
+      "started_at": "2026-09-03T21:43:46.888012+00:00"
+    },
+    {
+      "job": "2026-09-04__02-43-47",
+      "family": "deepswe",
+      "klass": "canonical",
+      "provider": "moonshotai",
+      "model": "k3",
+      "effort": null,
+      "n_concurrent": 1,
+      "started_at": "2026-09-04T05:14:33.717464+00:00"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "db736290-2041-4f07-8ac3-6fa9d7cea180",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git/\n.gitattributes\n.github/\n.gitignore\nLICENSE\nREADME.md\nSECURITY.md\nast/\nbench_test.go\nbuiltin/\nchecker/\ncompiler/\nconf/\ndebug/\ndocgen/\ndocs/\nexpr.go\nexpr_test.go\nfile/\ngo.mod\ninternal/\noptimizer/\nparser/\npatcher/\nrepl/\ntest/\ntestdata/\ntypes/\nvm/",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

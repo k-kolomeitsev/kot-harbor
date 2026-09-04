@@ -1,0 +1,11 @@
+data/** -text
+tasks/** -text
+build/** -text
+kot_harbor/kot -text
+
+*.py text eol=lf
+*.md text eol=lf
+requirements.txt text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+MANIFEST.sha256 text eol=lf

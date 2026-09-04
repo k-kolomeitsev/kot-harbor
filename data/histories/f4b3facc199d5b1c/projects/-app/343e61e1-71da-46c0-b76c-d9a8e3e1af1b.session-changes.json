@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "343e61e1-71da-46c0-b76c-d9a8e3e1af1b",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

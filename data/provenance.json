@@ -1,0 +1,37 @@
+{
+  "format_version": 1,
+  "benchmark": "FrontierHarness Eval v1",
+  "pull_request": "https://github.com/frontier-harness-eval/eval/pull/9",
+  "model": {
+    "provider": "moonshotai",
+    "id": "k3",
+    "display": "Kimi K3"
+  },
+  "harbor": {
+    "version": "0.22.0",
+    "python": "3.12.10",
+    "k": 1,
+    "n_concurrent": 1
+  },
+  "kot": {
+    "version": "1.3.1",
+    "source_revision": "96328165955504c601b67301d4be89bec5259b6b",
+    "binary": "kot_harbor/kot",
+    "sha256": "ac992437515974b8dae5ac96ef78fc5d584d3bbf28d72dac1163e2d1ce2d558e",
+    "target": "x86_64-unknown-linux-musl"
+  },
+  "jobs": [
+    "2026-09-04__00-24-47",
+    "2026-09-04__02-43-47"
+  ],
+  "tasks": {
+    "terminal_bench_2_1": 21,
+    "deep_swe": 9
+  },
+  "result": {
+    "successful": 23,
+    "total": 30,
+    "pass_rate": 0.7666666666666667
+  },
+  "redactions": "data/redactions.json"
+}

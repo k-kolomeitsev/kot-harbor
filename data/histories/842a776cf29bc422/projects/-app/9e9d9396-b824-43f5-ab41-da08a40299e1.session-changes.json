@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "9e9d9396-b824-43f5-ab41-da08a40299e1",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "main.db\nmain.db-wal",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

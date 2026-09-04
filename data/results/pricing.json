@@ -1,0 +1,7 @@
+{
+  "_comment": "USD per 1M tokens, kimi-k3 (owner-supplied price table 2026-09-04): input cache miss $3.00, cache hit $0.30, output $15.00. Cache write priced at the input (miss) rate.",
+  "input_per_mtok": 3.0,
+  "cache_read_per_mtok": 0.3,
+  "cache_creation_per_mtok": 3.0,
+  "output_per_mtok": 15.0
+}

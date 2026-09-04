@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "e6a860a8-f593-425c-bee0-c88dcce81ca7",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".browserslistrc\n.codecov.yml\n.devcontainer/\n.eslintignore\n.eslintrc\n.git/\n.gitattributes\n.github/\n.gitignore\n.gitpod.yml\n.prettierrc\n.releaserc\n.stylelintrc\n.vscode/\n.yarn/\n.yarnrc.yml\nCHANGELOG.md\nCODE_OF_CONDUCT.md\nCONTRIBUTING.md\nLICENSE\nREADME.md\nbabel.config.js\ncli.js\ncontrib/\ndockers/\ndocs/\nfonts/\nkatex.ts\nkatex.webpack.js\nnode_modules/\npackage.json\nrenovate.json\nrollup.config.js\nsrc/\nstatic/\ntest/\ntsconfig.json\ntypes/\nupdate-sri.js\nwallaby.js\nwebpack.analyze.js\nwebpack.common.js\nwebpack.config.js\nwebpack.dev.js\nwebsite/\nyarn.lock",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

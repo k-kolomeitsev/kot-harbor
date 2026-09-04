@@ -1,0 +1,1017 @@
+{
+  "generated_at": "2026-09-04T07:28:09.081571+00:00",
+  "model": "k3",
+  "provider": "moonshotai",
+  "pricing": {
+    "_comment": "USD per 1M tokens, kimi-k3 (owner-supplied price table 2026-09-04): input cache miss $3.00, cache hit $0.30, output $15.00. Cache write priced at the input (miss) rate.",
+    "input_per_mtok": 3.0,
+    "cache_read_per_mtok": 0.3,
+    "cache_creation_per_mtok": 3.0,
+    "output_per_mtok": 15.0
+  },
+  "token_totals": {
+    "input_tokens": 2027470,
+    "cache_read_input_tokens": 144773846,
+    "cache_creation_input_tokens": 0,
+    "output_tokens": 1037745,
+    "reasoning_tokens": 656915,
+    "turns": 1369
+  },
+  "total_cost_usd": 65.08073879999999,
+  "effective_cost_per_pass_usd": 2.8295973391304345,
+  "cost_formula": "(input*input_per_mtok + cache_read*cache_read_per_mtok + cache_creation*cache_creation_per_mtok + output*output_per_mtok) / 1e6",
+  "canonical_selection": "earliest valid trial per task (first valid attempt); smoke runs excluded",
+  "pending_rerun": [],
+  "tasks": {
+    "terminal-bench/regex-log": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "regex-log__jqGSu2i"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "regex-log__jqGSu2i"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 344.217566,
+        "turns": 7,
+        "input_tokens": 13369,
+        "cache_read_input_tokens": 156672,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 12695,
+        "reasoning_tokens": 9698,
+        "cache_hit_rate_normalized": 0.921377785357649,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.2775336
+    },
+    "terminal-bench/openssl-selfsigned-cert": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "openssl-selfsigned-cert__t75rCx5"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "openssl-selfsigned-cert__t75rCx5"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 135.081304,
+        "turns": 8,
+        "input_tokens": 6960,
+        "cache_read_input_tokens": 129536,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 4913,
+        "reasoning_tokens": 2767,
+        "cache_hit_rate_normalized": 0.94900949478373,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.1334358
+    },
+    "terminal-bench/polyglot-c-py": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "polyglot-c-py__pvuWZuS"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "polyglot-c-py__pvuWZuS"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 291.237936,
+        "turns": 6,
+        "input_tokens": 11552,
+        "cache_read_input_tokens": 123136,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 10919,
+        "reasoning_tokens": 9113,
+        "cache_hit_rate_normalized": 0.9142314088857211,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.2353818
+    },
+    "terminal-bench/sqlite-db-truncate": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "sqlite-db-truncate__p2v735F"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "sqlite-db-truncate__p2v735F"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 306.976792,
+        "turns": 10,
+        "input_tokens": 14898,
+        "cache_read_input_tokens": 201728,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 12579,
+        "reasoning_tokens": 9401,
+        "cache_hit_rate_normalized": 0.9312270918541634,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.29389740000000003
+    },
+    "terminal-bench/git-leak-recovery": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "git-leak-recovery__4hX65E6"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "git-leak-recovery__4hX65E6"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 192.261879,
+        "turns": 13,
+        "input_tokens": 11138,
+        "cache_read_input_tokens": 231680,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 7471,
+        "reasoning_tokens": 4617,
+        "cache_hit_rate_normalized": 0.954130253935046,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.214983
+    },
+    "terminal-bench/log-summary-date-ranges": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "log-summary-date-ranges__obYpkMT"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "log-summary-date-ranges__obYpkMT"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 79.895117,
+        "turns": 6,
+        "input_tokens": 7452,
+        "cache_read_input_tokens": 100608,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 2885,
+        "reasoning_tokens": 936,
+        "cache_hit_rate_normalized": 0.9310383120488618,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.09581339999999999
+    },
+    "terminal-bench/constraints-scheduling": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "constraints-scheduling__N8NLVJC"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "constraints-scheduling__N8NLVJC"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 189.502064,
+        "turns": 7,
+        "input_tokens": 11732,
+        "cache_read_input_tokens": 134912,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 7869,
+        "reasoning_tokens": 5234,
+        "cache_hit_rate_normalized": 0.919996726766864,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.1937046
+    },
+    "terminal-bench/gcode-to-text": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "gcode-to-text__YLWpZLc"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "gcode-to-text__YLWpZLc"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 122.624197,
+        "turns": 14,
+        "input_tokens": 16850,
+        "cache_read_input_tokens": 235174,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 4048,
+        "reasoning_tokens": 1397,
+        "cache_hit_rate_normalized": 0.933141288131289,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.18182220000000002
+    },
+    "terminal-bench/dna-insert": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "dna-insert__jqVmugH"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "dna-insert__jqVmugH"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 955.451706,
+        "turns": 14,
+        "input_tokens": 51787,
+        "cache_read_input_tokens": 426240,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 42971,
+        "reasoning_tokens": 37217,
+        "cache_hit_rate_normalized": 0.8916651151503995,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.927798
+    },
+    "terminal-bench/largest-eigenval": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "largest-eigenval__PCN8Fed"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "largest-eigenval__PCN8Fed"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 813.395863,
+        "turns": 32,
+        "input_tokens": 39892,
+        "cache_read_input_tokens": 1071360,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 30698,
+        "reasoning_tokens": 21121,
+        "cache_hit_rate_normalized": 0.9641017518978594,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.901554
+    },
+    "terminal-bench/merge-diff-arc-agi-task": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "merge-diff-arc-agi-task__3NDYiVW"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "merge-diff-arc-agi-task__3NDYiVW"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 505.17657,
+        "turns": 35,
+        "input_tokens": 30546,
+        "cache_read_input_tokens": 933120,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 17880,
+        "reasoning_tokens": 7456,
+        "cache_hit_rate_normalized": 0.9683022956086444,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.639774
+    },
+    "terminal-bench/vulnerable-secret": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "vulnerable-secret__ZLZBA5K"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "vulnerable-secret__ZLZBA5K"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 126.299789,
+        "turns": 9,
+        "input_tokens": 12337,
+        "cache_read_input_tokens": 167168,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 4364,
+        "reasoning_tokens": 2883,
+        "cache_hit_rate_normalized": 0.9312721094119941,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.1526214
+    },
+    "terminal-bench/extract-elf": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "extract-elf__5sxZ3T4"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "extract-elf__5sxZ3T4"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 608.796462,
+        "turns": 14,
+        "input_tokens": 31478,
+        "cache_read_input_tokens": 392448,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 25930,
+        "reasoning_tokens": 20394,
+        "cache_hit_rate_normalized": 0.9257464746205706,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.6011184
+    },
+    "terminal-bench/build-cython-ext": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": "timeout",
+        "reason": "verifier reward 0.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "build-cython-ext__UXEtpaN"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": "timeout",
+          "reason": "verifier reward 0.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "build-cython-ext__UXEtpaN"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 904.029541,
+        "turns": 42,
+        "input_tokens": 71659,
+        "cache_read_input_tokens": 1833458,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 32688,
+        "reasoning_tokens": 23259,
+        "cache_hit_rate_normalized": 0.9623860371830182,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 1.2553344
+    },
+    "terminal-bench/kv-store-grpc": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "kv-store-grpc__DEjg4ZD"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "kv-store-grpc__DEjg4ZD"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 542.175374,
+        "turns": 26,
+        "input_tokens": 28641,
+        "cache_read_input_tokens": 678656,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 19828,
+        "reasoning_tokens": 13150,
+        "cache_hit_rate_normalized": 0.9595064025437687,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.5869398
+    },
+    "terminal-bench/chess-best-move": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "chess-best-move__uAUSYb6"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "chess-best-move__uAUSYb6"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 547.853736,
+        "turns": 14,
+        "input_tokens": 21738,
+        "cache_read_input_tokens": 197376,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 23185,
+        "reasoning_tokens": 17996,
+        "cache_hit_rate_normalized": 0.9007913688764753,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.4722018
+    },
+    "terminal-bench/db-wal-recovery": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "db-wal-recovery__94HFSMe"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "db-wal-recovery__94HFSMe"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 107.365701,
+        "turns": 6,
+        "input_tokens": 7548,
+        "cache_read_input_tokens": 99840,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 4290,
+        "reasoning_tokens": 2169,
+        "cache_hit_rate_normalized": 0.9297128170745335,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.116946
+    },
+    "terminal-bench/code-from-image": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "code-from-image__eUxE4TJ"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "code-from-image__eUxE4TJ"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 52.60655,
+        "turns": 6,
+        "input_tokens": 3818,
+        "cache_read_input_tokens": 94014,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 1295,
+        "reasoning_tokens": 690,
+        "cache_hit_rate_normalized": 0.9609739144656145,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.059083199999999995
+    },
+    "terminal-bench/modernize-scientific-stack": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "modernize-scientific-stack__vREfCoz"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "modernize-scientific-stack__vREfCoz"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 211.332977,
+        "turns": 9,
+        "input_tokens": 11028,
+        "cache_read_input_tokens": 174592,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 7847,
+        "reasoning_tokens": 5317,
+        "cache_hit_rate_normalized": 0.9405882986747118,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.2031666
+    },
+    "terminal-bench/multi-source-data-merger": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "multi-source-data-merger__BqtNqZJ"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "multi-source-data-merger__BqtNqZJ"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 179.374592,
+        "turns": 11,
+        "input_tokens": 8968,
+        "cache_read_input_tokens": 198912,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 6529,
+        "reasoning_tokens": 3254,
+        "cache_hit_rate_normalized": 0.9568597267654416,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.1845126
+    },
+    "terminal-bench/sanitize-git-repo": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__00-24-47",
+        "trial": "sanitize-git-repo__tEzFRUB"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__00-24-47",
+          "trial": "sanitize-git-repo__tEzFRUB"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 300.494982,
+        "turns": 16,
+        "input_tokens": 45930,
+        "cache_read_input_tokens": 516096,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 10089,
+        "reasoning_tokens": 4683,
+        "cache_hit_rate_normalized": 0.918277802094565,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 0.4439538
+    },
+    "datacurve/anko-typed-variable-bindings": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1",
+        "job": "2026-09-04__02-43-47",
+        "trial": "anko-typed-variable-bindings__HsqEjUh"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1",
+          "job": "2026-09-04__02-43-47",
+          "trial": "anko-typed-variable-bindings__HsqEjUh"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 2300.878849,
+        "turns": 80,
+        "input_tokens": 139916,
+        "cache_read_input_tokens": 8274176,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 57343,
+        "reasoning_tokens": 32904,
+        "cache_hit_rate_normalized": 0.9833712300744988,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 3.7621458
+    },
+    "datacurve/arktype-json-schema-refs-dependencies": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "arktype-json-schema-refs-depende__42BYPtX"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "arktype-json-schema-refs-depende__42BYPtX"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 3853.332512,
+        "turns": 155,
+        "input_tokens": 221720,
+        "cache_read_input_tokens": 22335488,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 122389,
+        "reasoning_tokens": 76924,
+        "cache_hit_rate_normalized": 0.9901707693611728,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 9.201641399999998
+    },
+    "datacurve/fastapi-deprecation-response-headers": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1",
+        "job": "2026-09-04__02-43-47",
+        "trial": "fastapi-deprecation-response-hea__bNL5CCY"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1",
+          "job": "2026-09-04__02-43-47",
+          "trial": "fastapi-deprecation-response-hea__bNL5CCY"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 2553.546537,
+        "turns": 92,
+        "input_tokens": 143963,
+        "cache_read_input_tokens": 10297856,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 66849,
+        "reasoning_tokens": 40796,
+        "cache_hit_rate_normalized": 0.9862128428006652,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 4.5239807999999995
+    },
+    "datacurve/httpx-multipart-response-parsing": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": "nonzero_exit_with_reward",
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "httpx-multipart-response-parsing__M3ZqAnh"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": "nonzero_exit_with_reward",
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "httpx-multipart-response-parsing__M3ZqAnh"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 1964.449376,
+        "turns": 53,
+        "input_tokens": 101881,
+        "cache_read_input_tokens": 4141312,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 58700,
+        "reasoning_tokens": 41484,
+        "cache_hit_rate_normalized": 0.9759895437233235,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 2.4285365999999997
+    },
+    "datacurve/expr-try-catch-errors": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "expr-try-catch-errors__aDUyXZd"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "expr-try-catch-errors__aDUyXZd"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 2926.769187,
+        "turns": 117,
+        "input_tokens": 217743,
+        "cache_read_input_tokens": 18327296,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 95562,
+        "reasoning_tokens": 60868,
+        "cache_hit_rate_normalized": 0.988258692796494,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 7.5848477999999995
+    },
+    "datacurve/python-statemachine-state-data-scoping": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1.0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "python-statemachine-state-data-s__Z9rmJat"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1.0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "python-statemachine-state-data-s__Z9rmJat"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 2733.663135,
+        "turns": 136,
+        "input_tokens": 197687,
+        "cache_read_input_tokens": 18764032,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 82856,
+        "reasoning_tokens": 42382,
+        "cache_hit_rate_normalized": 0.9895744156951171,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 7.4651106
+    },
+    "datacurve/katex-multicolumn-array-spans": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": true,
+        "anomaly": null,
+        "reason": "verifier reward 1",
+        "job": "2026-09-04__02-43-47",
+        "trial": "katex-multicolumn-array-spans__Q9BJVzX"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": true,
+          "anomaly": null,
+          "reason": "verifier reward 1",
+          "job": "2026-09-04__02-43-47",
+          "trial": "katex-multicolumn-array-spans__Q9BJVzX"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 3764.534852,
+        "turns": 147,
+        "input_tokens": 172647,
+        "cache_read_input_tokens": 16717568,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 72799,
+        "reasoning_tokens": 36941,
+        "cache_hit_rate_normalized": 0.989778282869697,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 6.625196399999999
+    },
+    "datacurve/scc-bounded-memory-spilling": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "scc-bounded-memory-spilling__tXZmikE"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "scc-bounded-memory-spilling__tXZmikE"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 1995.874581,
+        "turns": 107,
+        "input_tokens": 136129,
+        "cache_read_input_tokens": 11035904,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 69001,
+        "reasoning_tokens": 39673,
+        "cache_hit_rate_normalized": 0.9878151988988934,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 4.754173199999999
+    },
+    "datacurve/meriyah-explicit-resource-declarations": {
+      "status": "ok",
+      "canonical": {
+        "validity": "valid",
+        "success": false,
+        "anomaly": null,
+        "reason": "verifier reward 0",
+        "job": "2026-09-04__02-43-47",
+        "trial": "meriyah-explicit-resource-declar__t6QeVnM"
+      },
+      "attempts": [
+        {
+          "validity": "valid",
+          "success": false,
+          "anomaly": null,
+          "reason": "verifier reward 0",
+          "job": "2026-09-04__02-43-47",
+          "trial": "meriyah-explicit-resource-declar__t6QeVnM"
+        }
+      ],
+      "metrics": {
+        "duration_seconds": 4339.695826,
+        "turns": 177,
+        "input_tokens": 236463,
+        "cache_read_input_tokens": 26783488,
+        "cache_creation_input_tokens": 0,
+        "output_tokens": 121273,
+        "reasoning_tokens": 82191,
+        "cache_hit_rate_normalized": 0.9912485777638901,
+        "tokens_complete": true
+      },
+      "cost_first_cold_usd": 10.563530399999998
+    }
+  }
+}

@@ -1,0 +1,106 @@
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Collecting main service artifacts
+Exception AgentTimeoutError is in exclude_exceptions, not retrying
+Not retrying trial because the exception is not in include_exceptions or the maximum number of retries has been reached
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts
+Running command: apt-get update && apt-get install -y python3 ca-certificates procps
+Command outputs captured
+Running command: python3 /opt/kot/runner.py
+Command outputs captured
+Collecting main service artifacts

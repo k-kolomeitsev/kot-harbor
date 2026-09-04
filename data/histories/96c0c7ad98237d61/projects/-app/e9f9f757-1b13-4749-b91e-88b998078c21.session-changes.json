@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "e9f9f757-1b13-4749-b91e-88b998078c21",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": ".git/\n.github/\n.gitignore\n.travis.yml\nLICENSE\nREADME.md\n_example/\nanko.go\nanko.png\nanko_test.go\nast/\ncmd/\ncore/\nenv/\ngo.mod\nmisc/\npackages/\nparser/\nvm/",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

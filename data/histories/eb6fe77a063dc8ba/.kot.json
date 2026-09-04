@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "install_method": null,
+  "auto_updates": null,
+  "primary_api_key": null,
+  "oauth_account": null,
+  "custom_api_key_responses": {
+    "approved": false,
+    "rejected": false,
+    "providers": {}
+  },
+  "projects": {
+    "-app": {
+      "allowed_tools": [],
+      "mcp_servers": null,
+      "last_session_id": null,
+      "last_model_usage": {
+        "k3": {
+          "total_input_tokens": 71659,
+          "total_output_tokens": 32688,
+          "total_cache_creation_input_tokens": 0,
+          "total_cache_read_input_tokens": 1833458,
+          "total_reasoning_tokens": 23259,
+          "last_used_at": "2026-09-03T19:40:11.053473875Z"
+        }
+      },
+      "last_api_duration_ms": 873852,
+      "last_total_input_tokens": 71659,
+      "last_total_output_tokens": 32688,
+      "last_total_cache_creation_input_tokens": 0,
+      "last_total_cache_read_input_tokens": 1833458,
+      "last_total_reasoning_tokens": 23259,
+      "disabled_mcp_servers": [],
+      "enabled_mcp_servers": [],
+      "active_worktree_session": null
+    }
+  },
+  "mcp_servers": null,
+  "permission_explainer_enabled": false,
+  "user_id": null,
+  "num_startups": 0,
+  "first_start_time": "2026-09-03T19:25:11.383951867Z",
+  "migration_version": 0
+}

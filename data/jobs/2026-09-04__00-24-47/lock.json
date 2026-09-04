@@ -1,0 +1,1120 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-09-03T19:24:47.606479Z",
+    "harbor": {
+        "version": "0.22.0",
+        "is_editable": false
+    },
+    "n_concurrent_trials": 1,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "AgentSafetyRefusalError",
+            "VerifierOutputParseError",
+            "VerifierTimeoutError",
+            "RewardFileEmptyError",
+            "AgentTimeoutError",
+            "RewardFileNotFoundError",
+            "ModelNotFoundError",
+            "AgentAuthenticationError",
+            "ApiUsageLimitError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "build-cython-ext",
+                "type": "local",
+                "digest": "sha256:2b6d37640a19b2b63aa5ffa240cf3763742783745e899484d26dfa3bd1e4e3f4",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\build-cython-ext"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "chess-best-move",
+                "type": "local",
+                "digest": "sha256:bf0014b54d91e1179ecbd068b5b53f63910c117c46c44a146cb817d030524fb9",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\chess-best-move"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "code-from-image",
+                "type": "local",
+                "digest": "sha256:a102ecc04d661107a636df8166484f763bdaf7688febba0152689d2cb1f67595",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\code-from-image"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "constraints-scheduling",
+                "type": "local",
+                "digest": "sha256:cb05b375367a46813adae1682251851d45047c9caf235ce2e598295a84f83809",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\constraints-scheduling"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "db-wal-recovery",
+                "type": "local",
+                "digest": "sha256:b01ef10abc46d2f339d478e2dafeca8bbb1e463ee88b8807f3ff5e86083ed29d",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\db-wal-recovery"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "dna-insert",
+                "type": "local",
+                "digest": "sha256:62df22ebaf68a9afe6774ce4e21e8d6ad507c919cba2e7f23e71c07e10eee97b",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\dna-insert"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "extract-elf",
+                "type": "local",
+                "digest": "sha256:334fd3a61133108db7e7087b00d6f41384d8f2f65c40e25f66ff03e5f3e578d2",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\extract-elf"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "gcode-to-text",
+                "type": "local",
+                "digest": "sha256:69b2efdc8701d664f3aee1f857f940255556b5e56316a4cd84d72f5b183236ee",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\gcode-to-text"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "git-leak-recovery",
+                "type": "local",
+                "digest": "sha256:03f107c5f85e2fb1bf3d10c36f9acf9bcdd4c851b050e88fc65e33fc1c633ca9",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\git-leak-recovery"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "kv-store-grpc",
+                "type": "local",
+                "digest": "sha256:31330a12ab6d357df2655d78063fb561b757a3a2faa75cb3b04e5bca28bf56c9",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\kv-store-grpc"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "largest-eigenval",
+                "type": "local",
+                "digest": "sha256:cf117492349f17abd1668a393381d04752574bb6286bc94615fb242730acf88e",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\largest-eigenval"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "log-summary-date-ranges",
+                "type": "local",
+                "digest": "sha256:e6e0bce4826e9a6c979bc60945b58f773f54763e4deb650938105cdbdd58a55e",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\log-summary-date-ranges"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "merge-diff-arc-agi-task",
+                "type": "local",
+                "digest": "sha256:19c499043968304c4e470396cbc7d0f2a517bf070858ef0475ec3380c53124f3",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\merge-diff-arc-agi-task"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "modernize-scientific-stack",
+                "type": "local",
+                "digest": "sha256:a5fde6df865604da81d821c8a4c8b1e1cf4fe869013684f212f50839f40b6d18",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\modernize-scientific-stack"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "multi-source-data-merger",
+                "type": "local",
+                "digest": "sha256:3c8f9e8cd33d7c46f32d347365840fdb2765f645b317e2d95838bb51429520f8",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\multi-source-data-merger"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "openssl-selfsigned-cert",
+                "type": "local",
+                "digest": "sha256:af47ded789b5838752d748ad8a8c442f66432c9245351f96653593382ab9ed11",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\openssl-selfsigned-cert"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "polyglot-c-py",
+                "type": "local",
+                "digest": "sha256:dbd2e3988aaf7efffe9e3d56705dbc66012ce38a737fea526f5873a6bfb88889",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\polyglot-c-py"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "regex-log",
+                "type": "local",
+                "digest": "sha256:8fc2267fd61d6b2f9f7a911086db38e0a155b0ceae8a6ecafc4887b7f57f215a",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\regex-log"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "sanitize-git-repo",
+                "type": "local",
+                "digest": "sha256:c6cf001538788b95593638f81564eed30c1e83b1b37a58356ed9892531db58b0",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sanitize-git-repo"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "sqlite-db-truncate",
+                "type": "local",
+                "digest": "sha256:9f86b374eb83fa49fe3434181558328d39f7706053822379e7443436d0b5872b",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sqlite-db-truncate"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "vulnerable-secret",
+                "type": "local",
+                "digest": "sha256:8411de369071cd408a1a865aa4a3bcf422863d349091d4af19120ec43cd7684a",
+                "source": "tb21-tasks",
+                "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\vulnerable-secret"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "environment_build_timeout_multiplier": 2.0,
+            "agent": {
+                "name": "kot_harbor.kot_agent:KotAgent",
+                "model_name": "moonshotai/k3",
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [
+                    "api.kimi.com"
+                ],
+                "kwargs": {},
+                "env": {
+                    "KOT_BENCH_PROVIDER": "moonshotai",
+                    "KOT_BENCH_MODEL": "k3",
+                    "MOONSHOT_API_KEY": "sk-k****F7g"
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "docker",
+                "force_build": false,
+                "delete": true,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "mounts": [
+                    {
+                        "type": "bind",
+                        "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                        "target": "/mnt/kot-homes"
+                    }
+                ],
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            }
+        }
+    ]
+}

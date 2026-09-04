@@ -1,0 +1,1 @@
+{"compaction": {"auto_enabled": true}, "daemon": {"retry": {"max_attempts": 30, "quick_retries": 2, "quick_delay_secs": 30, "slow_delay_secs": 60}}}

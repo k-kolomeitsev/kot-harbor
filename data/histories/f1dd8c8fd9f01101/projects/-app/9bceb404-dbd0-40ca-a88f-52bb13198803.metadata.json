@@ -1,0 +1,20 @@
+{
+  "started_at": "2026-09-03T20:15:08.936104232Z",
+  "model": "k3",
+  "provider": "moonshotai",
+  "agent_type": null,
+  "custom_title": null,
+  "ai_title": null,
+  "agent_color": null,
+  "task_summary": null,
+  "tag": null,
+  "usage": {
+    "input_tokens": 31478,
+    "output_tokens": 25930,
+    "cache_creation_input_tokens": 0,
+    "cache_read_input_tokens": 392448,
+    "subagent_count": 0,
+    "subagent_input_tokens": 0,
+    "subagent_output_tokens": 0
+  }
+}

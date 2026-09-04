@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "replacement": "[REDACTED_PROVIDER_CREDENTIAL]",
+  "scope": "provider credential values only",
+  "files": [
+    {
+      "path": "data/histories/f4b3facc199d5b1c/projects/-app/343e61e1-71da-46c0-b76c-d9a8e3e1af1b.jsonl",
+      "replacements": 1
+    }
+  ],
+  "total_replacements": 1
+}

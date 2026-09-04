@@ -1,0 +1,137 @@
+{
+    "id": "35bb77be-9e89-4836-b112-c7d4289ba63a",
+    "task_name": "terminal-bench/gcode-to-text",
+    "trial_name": "gcode-to-text__YLWpZLc",
+    "trial_uri": "file:///C:/raznoe/projects/business/originalclaudeleak/frontier-bench/jobs/2026-09-04__00-24-47/gcode-to-text__YLWpZLc",
+    "task_id": {
+        "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\gcode-to-text"
+    },
+    "source": "tb21-tasks",
+    "task_checksum": "0023ea3659eda02e599395f32765ddee42716faf1d23b3a02f807ba3d94d75e2",
+    "config": {
+        "task": {
+            "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\gcode-to-text",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tb21-tasks"
+        },
+        "trial_name": "gcode-to-text__YLWpZLc",
+        "trials_dir": "jobs\\2026-09-04__00-24-47",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": 2.0,
+        "agent": {
+            "name": "kot_harbor.kot_agent:KotAgent",
+            "import_path": null,
+            "model_name": "moonshotai/k3",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [
+                "api.kimi.com"
+            ],
+            "kwargs": {},
+            "env": {
+                "KOT_BENCH_PROVIDER": "moonshotai",
+                "KOT_BENCH_MODEL": "k3",
+                "MOONSHOT_API_KEY": "sk-k****F7g"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                    "target": "/mnt/kot-homes"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "c3131fce-8cba-4785-9a14-a11e13d177da",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "KOT",
+        "version": "kot 1.3.1",
+        "model_info": {
+            "name": "k3",
+            "provider": "moonshotai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 252024,
+        "n_cache_tokens": 235174,
+        "n_output_tokens": 4048,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "uncached_input_tokens": 16850,
+            "cache_read_input_tokens": 235174,
+            "cache_creation_input_tokens": 0,
+            "output_tokens": 4048,
+            "reasoning_tokens": 1397,
+            "turns": 14
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-09-03T20:25:33.702067Z",
+    "finished_at": "2026-09-03T20:28:10.149352Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T20:25:33.708585Z",
+        "finished_at": "2026-09-03T20:25:37.089437Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T20:25:37.089437Z",
+        "finished_at": "2026-09-03T20:25:53.820281Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T20:25:53.820281Z",
+        "finished_at": "2026-09-03T20:27:56.444478Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T20:27:56.446542Z",
+        "finished_at": "2026-09-03T20:28:06.319183Z"
+    },
+    "step_results": null
+}

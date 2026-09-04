@@ -1,0 +1,40 @@
+{
+  "name": "FrontierHarness Eval v1",
+  "status": "frozen",
+  "model": "Kimi K3",
+  "model_provider": "Fireworks and Moonshot AI",
+  "task_count": 30,
+  "harness_count": 10,
+  "configuration_count": 13,
+  "evaluation_count": 390,
+  "canonical_selection": "first valid attempt 1",
+  "excluded_labels": ["warm", "smoke"],
+  "task_sources": {
+    "terminal_bench": {
+      "dataset": "terminal-bench/terminal-bench-2-1",
+      "count": 21
+    },
+    "deep_swe": {
+      "repository": "datacurve-ai/deep-swe",
+      "version": "v1.1",
+      "count": 9
+    }
+  },
+  "harness_configurations": [
+    "claude-code",
+    "codex",
+    "dsh-creator",
+    "dsh-minimal",
+    "dsh-ptc",
+    "dsh-standard",
+    "exo",
+    "hermes",
+    "kimi-code",
+    "oh-my-pi",
+    "opencode",
+    "pi-responses",
+    "kot"
+  ],
+  "results": "results/eval-data.json",
+  "interactive_report": "https://frontierharness.org"
+}

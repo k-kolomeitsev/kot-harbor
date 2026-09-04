@@ -1,0 +1,129 @@
+{
+  "tb": {
+    "build-cython-ext": {
+      "cache_revision": "35dc561790e73f13e59837828ac0863c0893edc6b71d42cf7d58656c843adf12",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\build-cython-ext"
+    },
+    "chess-best-move": {
+      "cache_revision": "9ab8e4b3674282e751edafbd9b5bd551fef995fd6601585a2cdb04fd70c520da",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\chess-best-move"
+    },
+    "code-from-image": {
+      "cache_revision": "ef2907bb300d9b3352410c2a75dbf831278c187c073298371870ea9c83526f78",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\code-from-image"
+    },
+    "constraints-scheduling": {
+      "cache_revision": "91dd6f87e1ee508328d5aafbd99a6bd1ccc47bc22671b4aaa4060bda492deb53",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\constraints-scheduling"
+    },
+    "db-wal-recovery": {
+      "cache_revision": "07e9193513bfce038b9f9d84962ecc85683eee0a642d14ee6fb7104b086ddab4",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\db-wal-recovery"
+    },
+    "dna-insert": {
+      "cache_revision": "37fc023970e3464c1acc31f43e04a0b4b94758130d340788f261f00764d9e530",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\dna-insert"
+    },
+    "extract-elf": {
+      "cache_revision": "1ef31d566be4fe3459d5368621ae7ef7a31b23ef675737e473bbc43c8c7b3fce",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\extract-elf"
+    },
+    "git-leak-recovery": {
+      "cache_revision": "22a9ec10dbd4cd8b99477b70e1944103775ca41de9b9e0025ec4898cd17bd334",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\git-leak-recovery"
+    },
+    "gcode-to-text": {
+      "cache_revision": "7dd2af04820e71ecaba96bc493cbffa16317e96816c6c8003385c034adf6c23b",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\gcode-to-text"
+    },
+    "kv-store-grpc": {
+      "cache_revision": "973c5d4c111fb61a344457936f1c36400acd2d9e44389e7b319586fe23a7a307",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\kv-store-grpc"
+    },
+    "largest-eigenval": {
+      "cache_revision": "1b6f17c344d23e97435ba3fa93400d141f6bb7763ed2014fab418830983791b3",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\largest-eigenval"
+    },
+    "log-summary-date-ranges": {
+      "cache_revision": "27b074a2f10fff7606e096f3abd8dced418ad8fda0f53d88acbe477f2d9ceaf6",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\log-summary-date-ranges"
+    },
+    "merge-diff-arc-agi-task": {
+      "cache_revision": "6aab6511a5344ce87698293bb1ce4cc51d9a45f1ad9f0c075d2a83197b36727d",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\merge-diff-arc-agi-task"
+    },
+    "modernize-scientific-stack": {
+      "cache_revision": "67a9952aca67df9c70510acf62faea336644a0e9d379f3aaf9df79f14c8fcb12",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\modernize-scientific-stack"
+    },
+    "multi-source-data-merger": {
+      "cache_revision": "70367c38732e1beda7b229968a48d60242277c2fa4db91339c3f064c4c230d49",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\multi-source-data-merger"
+    },
+    "openssl-selfsigned-cert": {
+      "cache_revision": "d4afa2bd2a9ba1420db8d6cfde42ffdb4873ae2d955c35014e8da94444c83302",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\openssl-selfsigned-cert"
+    },
+    "polyglot-c-py": {
+      "cache_revision": "25570ccacf63f573a252eaa2a9c62ee8b55f5aa228cc803b5beb39dd6d8afeb7",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\polyglot-c-py"
+    },
+    "regex-log": {
+      "cache_revision": "802c16cfd132e6c457529cb864be5a757c1b23b6cadc57f2d01983cb0110292a",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\regex-log"
+    },
+    "sanitize-git-repo": {
+      "cache_revision": "6e86297715fae62cd499fbdd27013e11a38d05d7e05b7f661cb50b4ecead128f",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sanitize-git-repo"
+    },
+    "sqlite-db-truncate": {
+      "cache_revision": "956f038b479cc3b9b493553b57a60a8ff4154526386c3914c0b99e93e1ab6e87",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sqlite-db-truncate"
+    },
+    "vulnerable-secret": {
+      "cache_revision": "d76dfa9e256487c5542905b892156f694137aeef784e1abf3f41e15a8c946eac",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\vulnerable-secret"
+    }
+  },
+  "deepswe": {
+    "anko-typed-variable-bindings": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\anko-typed-variable-bindings"
+    },
+    "arktype-json-schema-refs-dependencies": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\arktype-json-schema-refs-dependencies"
+    },
+    "fastapi-deprecation-response-headers": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\fastapi-deprecation-response-headers"
+    },
+    "katex-multicolumn-array-spans": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\katex-multicolumn-array-spans"
+    },
+    "meriyah-explicit-resource-declarations": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\meriyah-explicit-resource-declarations"
+    },
+    "scc-bounded-memory-spilling": {
+      "clone_ref": "HEAD",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\scc-bounded-memory-spilling"
+    },
+    "expr-try-catch-errors": {
+      "clone_ref": "v1.0.0",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\expr-try-catch-errors"
+    },
+    "httpx-multipart-response-parsing": {
+      "clone_ref": "v1.0.0",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\httpx-multipart-response-parsing"
+    },
+    "python-statemachine-state-data-scoping": {
+      "clone_ref": "v1.0.0",
+      "task_dir": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\python-statemachine-state-data-scoping"
+    }
+  },
+  "deepswe_head_commit": "0b9fabbb63b9104d678fe965e1632f2dd9eaa2ea",
+  "deepswe_v100_tag": "v1.0.0",
+  "tb_cache": "C:\\Users\\uol92\\.cache\\harbor\\tasks\\packages\\terminal-bench"
+}

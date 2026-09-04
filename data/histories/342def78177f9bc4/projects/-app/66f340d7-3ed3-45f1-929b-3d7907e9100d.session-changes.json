@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "66f340d7-3ed3-45f1-929b-3d7907e9100d",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "alice_calendar.ics\nbob_calendar.ics\ncarol_calendar.ics",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

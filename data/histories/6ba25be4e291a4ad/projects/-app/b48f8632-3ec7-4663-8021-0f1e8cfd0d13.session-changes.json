@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "b48f8632-3ec7-4663-8021-0f1e8cfd0d13",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "chess_board.png",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

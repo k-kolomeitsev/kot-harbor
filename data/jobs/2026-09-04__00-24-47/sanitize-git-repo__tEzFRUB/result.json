@@ -1,0 +1,137 @@
+{
+    "id": "525c9364-49f4-4151-8c27-dadc5a7ffdd4",
+    "task_name": "terminal-bench/sanitize-git-repo",
+    "trial_name": "sanitize-git-repo__tEzFRUB",
+    "trial_uri": "file:///C:/raznoe/projects/business/originalclaudeleak/frontier-bench/jobs/2026-09-04__00-24-47/sanitize-git-repo__tEzFRUB",
+    "task_id": {
+        "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sanitize-git-repo"
+    },
+    "source": "tb21-tasks",
+    "task_checksum": "b789b3564f0fab038615cf84fc3a8bd769dd98aca23f601279ca378944833a7b",
+    "config": {
+        "task": {
+            "path": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\tb21-tasks\\sanitize-git-repo",
+            "git_url": null,
+            "git_commit_id": null,
+            "name": null,
+            "ref": null,
+            "overwrite": false,
+            "download_dir": null,
+            "source": "tb21-tasks"
+        },
+        "trial_name": "sanitize-git-repo__tEzFRUB",
+        "trials_dir": "jobs\\2026-09-04__00-24-47",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": 2.0,
+        "agent": {
+            "name": "kot_harbor.kot_agent:KotAgent",
+            "import_path": null,
+            "model_name": "moonshotai/k3",
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [
+                "api.kimi.com"
+            ],
+            "kwargs": {},
+            "env": {
+                "KOT_BENCH_PROVIDER": "moonshotai",
+                "KOT_BENCH_MODEL": "k3",
+                "MOONSHOT_API_KEY": "sk-k****F7g"
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "docker",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": [
+                {
+                    "type": "bind",
+                    "source": "C:\\raznoe\\projects\\business\\originalclaudeleak\\frontier-bench\\kot-homes",
+                    "target": "/mnt/kot-homes"
+                }
+            ],
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "c3131fce-8cba-4785-9a14-a11e13d177da",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "KOT",
+        "version": "kot 1.3.1",
+        "model_info": {
+            "name": "k3",
+            "provider": "moonshotai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 562026,
+        "n_cache_tokens": 516096,
+        "n_output_tokens": 10089,
+        "cost_usd": null,
+        "rollout_details": null,
+        "metadata": {
+            "uncached_input_tokens": 45930,
+            "cache_read_input_tokens": 516096,
+            "cache_creation_input_tokens": 0,
+            "output_tokens": 10089,
+            "reasoning_tokens": 4683,
+            "turns": 16
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-09-03T21:29:49.981765Z",
+    "finished_at": "2026-09-03T21:35:23.658135Z",
+    "environment_setup": {
+        "started_at": "2026-09-03T21:29:49.988780Z",
+        "finished_at": "2026-09-03T21:29:53.420164Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-09-03T21:29:53.420164Z",
+        "finished_at": "2026-09-03T21:30:09.736218Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-09-03T21:30:09.736218Z",
+        "finished_at": "2026-09-03T21:35:10.231200Z"
+    },
+    "verifier": {
+        "started_at": "2026-09-03T21:35:10.232775Z",
+        "finished_at": "2026-09-03T21:35:19.813090Z"
+    },
+    "step_results": null
+}

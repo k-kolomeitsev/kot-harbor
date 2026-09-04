@@ -1,0 +1,19 @@
+{
+  "format_version": 1,
+  "session_id": "78cf78ce-ccb7-4318-b7a1-5d1e071a9120",
+  "generation": 1,
+  "next_seq": 0,
+  "snapshot": {
+    "provider": "moonshotai",
+    "model": "k3",
+    "effort": "max",
+    "cwd": "/app",
+    "context": {
+      "cwd": "/app",
+      "directory_listing": "pyknotid.bundle",
+      "os": "linux"
+    },
+    "planning_mode": "default"
+  },
+  "log": []
+}

